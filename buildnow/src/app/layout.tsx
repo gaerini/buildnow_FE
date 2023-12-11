@@ -2,7 +2,7 @@ import "../../global.css";
 import StyledComponentsRegistry from "../../lib/registry";
 
 export default function RootLayout({
-  children,
+  children
 }: {
   children: React.ReactNode;
 }) {
