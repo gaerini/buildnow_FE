@@ -1,0 +1,7 @@
+.hoverOff path{
+    stroke: #94A3B8;
+    transition: stroke 0.3s ease;
+}
+.hoverOn path{
+    stroke: #000000;
+}

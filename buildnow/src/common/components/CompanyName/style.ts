@@ -2,7 +2,8 @@
 import styled from "styled-components";
 
 export const CompanyWrapper = styled.div`
-  font-size: 2rem;
+  font-size: 32px;
+  
 `;
 
 export const CompanyProfileImg = styled.img`
@@ -15,14 +16,14 @@ export const CompanyProfileImg = styled.img`
 export const CompanyProfileWrapper = styled.div`
   display: flex;
   width: 250px;
-  font-family: "Pretandard";
+  font-family: "Pretendard";
   font-weight: 700;
   align-items: center;
 `;
 
 export const CompanyLetter = styled.div`
   font-family: "PTMono";
-  font-size: 0.875rem;
+  font-size: 14px;
   font-weight: 350;
   color: #8d8d8d;
 `;
@@ -33,4 +34,6 @@ export const CompanyComponentWrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  margin-bottom: 20px;
+
 `;
