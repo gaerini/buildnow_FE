@@ -1,17 +1,25 @@
-import CompanyName from "../../common/components/CompanyName/CompanyName";
-import LeftNavBarTab from "../../common/components/LeftNavBarTab/LeftNavBarTab";
+'use client';
+
+import { useState } from "react";
+import LeftNavBar from "../../common/components/LeftNavBar/LeftNavBar";
+import TopBar from "@/common/components/TopBar/TopBar";
+import * as S from "./style";
+
 export default function CompanyInfo() {
+  const [selectedMenu, setSelectedMenu] = useState("Home");
+  
+  const selectedMenuHandler = (menuName:string) => {
+    setSelectedMenu(menuName);
+    // console.log(menuName);
+  }
+
   const data = require("../../../mock/profile.json");
   return (
     <>
-      <CompanyName
-        company={data.company}
-        img={data.companyLogoImg}
-      ></CompanyName>
-      <LeftNavBarTab tabname={"Home"}></LeftNavBarTab>
-
-      <LeftNavBarTab tabname={"지원 현황"}></LeftNavBarTab>
-
+    <S.CompanyInfoWindowWrapper>
+     <LeftNavBar company={data.company} companyLogoImg={data.companyLogoImg} onChange={selectedMenuHandler}/>
+     <TopBar tabname={selectedMenu}></TopBar>
+     </S.CompanyInfoWindowWrapper>
     </>
   );
 }

@@ -11,32 +11,48 @@ import styles from './LeftNavBar.module.css';
 
 interface LeftNavBarTabProps {
     tabname: string;
+    onChange?: (state:string) => void;
 }
 
-export default function LeftNavBarTab( {tabname}:LeftNavBarTabProps){
-    const [tabName, setTabName] = useState("Home");
+export default function LeftNavBarTab( {tabname, onChange}:LeftNavBarTabProps){
+    const [isHover, setIsHover] = useState(false);
+    const handleMouseEnter = (event:React.MouseEvent<HTMLDivElement>) => {
+        setIsHover(true);
+    };
 
-    useEffect(()=>{
-        setTabName(tabname);
-    },[tabname]);
+    const handleMouseLeave = (event:React.MouseEvent<HTMLDivElement>) => {
+        setIsHover(false);
+    };
 
     const renderIcon = () => {
-        switch (tabName) {
+        switch (tabname) {
             case "지원 현황":
-                return <ApplyIcon className={styles.icon}/>;
+                return <ApplyIcon  className={isHover? styles.hoverOn:styles.hoverOff}/>;
             case "배점표 관리":
-                return <ChartIcon className={styles.icon}/>;
+                return <ChartIcon  className={isHover? styles.hoverOn:styles.hoverOff}/>;
             default:
-                return <HomeIcon className={styles.icon}/>;
+                return <HomeIcon  className={isHover? styles.hoverOn:styles.hoverOff}/>;
+        }
+    };
+
+    const updateState = () => {
+        const newState = tabname;
+        if(onChange){
+            onChange(newState);
         }
     };
 
     return(<>
+        <S.menuWrapper onClick={updateState} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}
+        style={{backgroundColor: isHover? '#B2D1F8':'transparent'
+                ,transition: 'backgroundColor 0.3s ease'}} >
+        
         <S.tabWrapper>
             {renderIcon()}
-            <S.tabFontDiv>
+            <S.tabFontDiv style={{color: isHover? 'black':'#94A3B8'}}>
                 {tabname}
             </S.tabFontDiv>
         </S.tabWrapper>
+        </S.menuWrapper>
     </>);
 }

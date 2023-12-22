@@ -8,8 +8,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      </head>
       <body>
-        <StyledComponentsRegistry><div style={{width: '1920px', height:'1080px'}}>{children}</div></StyledComponentsRegistry>
+        <StyledComponentsRegistry><div style={{width: '100%', height:'100%'}}>{children}</div></StyledComponentsRegistry>
       </body>
     </html>
   );
