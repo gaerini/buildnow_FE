@@ -12,10 +12,18 @@ export const StyledButton = styled(baseButtonStyles)<ButtonProps>`
   background-color: ${(props) => (props.isChecked ? "#4CAF50" : "#D9D9D9")};
   color: ${(props) => (props.isChecked ? "#FFFFFF" : "#606266")};
   border: 1px solid ${(props) => (props.isChecked ? "#4CAF50" : "#D9D9D9")};
+
   width: 100%;
-  height: 1rem;
   fonst-size: 22px;
-  aspect-ratio: 6 / 1;
+  min-height: 4rem;
+  height: 4rem;
+
+  align-self: center; // 부모가 flex일 때 중앙으로 정렬
+  margin: 1em; // 상하 마진을 줘서 끝에서 약간 떨어지게 함
+
+  // position: fixed;
+  bottom: 4em; // 화면의 하단에 위치
+
   ${hoverEffect}
   &:hover {
     background-color: ${(props) => (props.isChecked ? "#4CAF50" : "#959595")};
