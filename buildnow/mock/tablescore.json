@@ -1,0 +1,67 @@
+[
+  {
+    "companyname": "L이앤씨",
+    "operation": "29 / 40",
+    "finance": "32 / 40",
+    "esg_safety": "18 / 40",
+    "others": "+14",
+    "total": "93",
+    "state": "통과"
+  },
+  {
+    "companyname": "ㄹ건설",
+    "operation": "37 / 40",
+    "finance": "33 / 40",
+    "esg_safety": "17 / 40",
+    "others": "-",
+    "total": "88"
+  },
+  {
+    "companyname": "ㄱ건설",
+    "operation": "35 / 40",
+    "finance": "36 / 40",
+    "esg_safety": "19 / 40",
+    "others": "-4",
+    "total": "86"
+  },
+  {
+    "companyname": "ㅅ기술",
+    "operation": "26 / 40",
+    "finance": "29 / 40",
+    "esg_safety": "16 / 40",
+    "others": "-1",
+    "total": "81"
+  },
+  {
+    "companyname": "A산업개발",
+    "operation": "32 / 40",
+    "finance": "28 / 40",
+    "esg_safety": "12 / 40",
+    "others": "+2",
+    "total": "74"
+  },
+  {
+    "companyname": "B건설",
+    "operation": "22 / 40",
+    "finance": "26 / 40",
+    "esg_safety": "16 / 40",
+    "others": "+5",
+    "total": "77"
+  },
+  {
+    "companyname": "F토건",
+    "operation": "26 / 40",
+    "finance": "32 / 40",
+    "esg_safety": "11 / 40",
+    "others": "-3",
+    "total": "66"
+  },
+  {
+    "companyname": "C개발",
+    "operation": "25 / 40",
+    "finance": "25 / 40",
+    "esg_safety": "14 / 40",
+    "others": "-",
+    "total": "64"
+  }
+]
