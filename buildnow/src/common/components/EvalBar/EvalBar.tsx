@@ -17,7 +17,7 @@ const ScoreCard = ({ data }: { data: TableData[] }) => {
   const item = data[0];
 
   return (
-    <>
+    <S.Header>
       <div>{item.companyname} 의 배점 결과</div>
       <S.ScoreCardContainer>
         <S.ScoreCard>
@@ -27,7 +27,7 @@ const ScoreCard = ({ data }: { data: TableData[] }) => {
           <S.Statusdiv>{item.state}</S.Statusdiv>
         </S.ScoreCard>
       </S.ScoreCardContainer>
-    </>
+    </S.Header>
   );
 };
 

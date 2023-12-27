@@ -2,6 +2,10 @@ import React from "react";
 import { useEffect, useState } from "react";
 import OverallIcon from "./overall.svg";
 import DetailIcon from "./detailToggle.svg";
+
+import ContentBody from "../EvalContentBody/EvalContentBody";
+import ContentDetail from "../EvalContentDetail/EvalContentDetail";
+
 import * as S from "./style";
 
 type TableData = {
@@ -15,28 +19,29 @@ type TableData = {
   state: string;
 };
 
-const ScoreDetails = ({ data }: { data: TableData[] }) => {
+type Props = {
+  icon: JSX.Element;
+  data: TableData[];
+  column: string;
+};
+
+const ScoreDetails: React.FC<Props> = ({ icon: Icon, data, column }) => {
   const item = data[0];
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <S.Container>
-      <S.Header>
-        <div>평가 항목</div>
-        <div>평가 점수</div>
-        <div>자세히 보기</div>
-      </S.Header>
-      <div>
-        <img src={OverallIcon} alt="Overall" />
-        <span>기업 개요</span>
-        <S.ScoreArea>{item.operation}</S.ScoreArea>
-        <img src={DetailIcon} alt="Detail" onClick={() => setIsOpen(!isOpen)} />
-      </div>
+    <>
+      <S.Body>
+        <ContentBody icon={Icon} item={item} column={column} />
+        <DetailIcon onClick={() => setIsOpen(!isOpen)} />
+      </S.Body>
       <S.DetailsArea isOpen={isOpen}>
         {/* 상세 점수 내역이 들어갈 부분 */}
-        <div>통과 여부: {item.state}</div>
+        <ContentDetail item={item} />
+        <ContentDetail item={item} />
+        <ContentDetail item={item} />
       </S.DetailsArea>
-    </S.Container>
+    </>
   );
 };
 
