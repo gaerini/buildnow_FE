@@ -6,7 +6,6 @@ import NewTag from "./Tags/NewTag";
 import PatentTag from "./Tags/PatentTag";
 import RecTag from "./Tags/RecTag";
 import * as S from "./style";
-import subcontractorInfo from '../../../../mock/subcontractorInfo.json';
 
 const SubContractorCard = () => {
   // You can also destructure your mockData here if needed

@@ -8,6 +8,7 @@ import OverallIcon from "../../common/components/EvalContent/overall.svg";
 import Finance from "../../common/components/EvalContent/finance.svg";
 import EsgSafety from "../../common/components/EvalContent/esgSafety.svg";
 import Record from "../../common/components/EvalContent/record.svg";
+import ReviewCompleteButton from "@/common/components/Button/ReviewCompleteButton/ReviewCompleteButton";
 
 import * as S from "./style";
 
@@ -47,6 +48,7 @@ const Home = () => {
         />
         <EvalContent icon={<Record />} data={tableData} column={"시공 실적"} />
       </S.Container>
+      <ReviewCompleteButton />
     </S.EvalBar>
   );
 };
