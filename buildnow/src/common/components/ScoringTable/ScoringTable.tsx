@@ -61,10 +61,14 @@ const TableComponent: React.FC<{ data: TableData[] }> = ({ data }) => {
   return (
     <S.table {...getTableProps()} className="table">
       <thead>
-        {headerGroups.map((headerGroup) => (
-          <tr {...headerGroup.getHeaderGroupProps()}>
-            {headerGroup.headers.map((column) => (
-              <S.Th {...column.getHeaderProps()} columname={column.id}>
+        {headerGroups.map((headerGroup, index) => (
+          <tr {...headerGroup.getHeaderGroupProps()} key={index}>
+            {headerGroup.headers.map((column, index) => (
+              <S.Th
+                {...column.getHeaderProps()}
+                key={index}
+                columname={column.id}
+              >
                 <S.headerLetter>{column.render("Header")} </S.headerLetter>
               </S.Th>
             ))}
@@ -72,18 +76,22 @@ const TableComponent: React.FC<{ data: TableData[] }> = ({ data }) => {
         ))}
       </thead>
       <tbody {...getTableBodyProps()}>
-        {rows.map((row) => {
+        {rows.map((row, index) => {
           prepareRow(row);
           return (
-            <tr {...row.getRowProps()} className="tr">
-              {row.cells.map((cell) => {
+            <tr {...row.getRowProps()} className="tr" key={index}>
+              {row.cells.map((cell, index) => {
                 const isScoreBox =
                   cell.column.id === "operation" ||
                   cell.column.id === "finance" ||
                   cell.column.id === "esg_safety" ||
                   cell.column.id === "others";
                 return (
-                  <S.Td {...cell.getCellProps()} columname={cell.column.id}>
+                  <S.Td
+                    {...cell.getCellProps()}
+                    columname={cell.column.id}
+                    key={index}
+                  >
                     {isScoreBox ? (
                       <S.ScoreBox score={cell.value} column={cell.column.id}>
                         <S.contentLetter

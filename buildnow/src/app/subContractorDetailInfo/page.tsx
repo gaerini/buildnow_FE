@@ -12,6 +12,7 @@ export default function subContractorDetailInfo() {
   return (
     <>
       <DetailInfoTab companyName="L이앤씨" />
+      <SubContractorCard/>
     </>
   );
 }

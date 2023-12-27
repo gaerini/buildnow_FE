@@ -6,22 +6,30 @@ import NewTag from "./Tags/NewTag";
 import PatentTag from "./Tags/PatentTag";
 import RecTag from "./Tags/RecTag";
 import * as S from "./style";
-
-const mockData = {
-  companyName: "L이앤씨",
-  시평액: "24.8%",
-  위치: "경기도",
-  공종: "철근콘크리트",
-  신규: true,
-  특허: true,
-  임원진추천: true,
-  지원날짜: "2023-12-05",
-};
+import subcontractorInfo from '../../../../mock/subcontractorInfo.json';
 
 const SubContractorCard = () => {
   // You can also destructure your mockData here if needed
-  const { companyName, 시평액, 위치, 공종, 신규, 특허, 임원진추천, 지원날짜 } =
-    mockData;
+  const data = require("../../../../mock/subcontractorInfo.json");
+  const [companyName, 시평액, 소재지, 공종, 신규, 특허, 임원진추천, 지원날짜]: [
+    string,
+    string,
+    string,
+    string,
+    boolean,
+    boolean,
+    boolean,
+    string
+  ] = [
+    data["기업 개요"]["companyName"],
+    data["기업 개요"]["시평액"],
+    data["기업 개요"]["소재지"],
+    data["기업 개요"]["공종"],
+    data["기업 개요"]["신규"],
+    data["기업 개요"]["특허"],
+    data["기업 개요"]["임원진추천"],
+    data["기업 개요"]["지원날짜"],
+  ];
 
   // Convert 시평액 to a rank value as needed by the RankingTag
   const ranking = parseFloat(시평액); // assuming 시평액 is a string in the mockData
@@ -45,7 +53,7 @@ const SubContractorCard = () => {
       {/* <S.Divider /> */}
       <S.TagList>
         <WorkTypeTag workType={공종} />
-        <AddressTag address={위치} />
+        <AddressTag address={소재지} />
         <RankingTag ranking={ranking} />
       </S.TagList>
     </S.Card>
