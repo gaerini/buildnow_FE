@@ -2,12 +2,15 @@
 import styled from "styled-components";
 
 export const EvalBar = styled.div`
+  display: flex;
+  flex-direction: column;
+  // justify-content: space-between; // 상단과 하단에 있는 요소들을 각각 끝으로 밀어냄
   position: fixed; // 위치를 고정시킵니다
   top: 0; // 상단과의 거리
   right: 0; // 우측과의 거리
   bottom: 0; // 하단과의 거리
   width: 30%; // 너비는 전체 화면의 30%
-  padding: 4em 0em;
+  padding: 3em 0em; // 상단 버튼에 대한 상단 패딩, 하단 버튼에 대한 하단 패딩
   background: #f9fafa;
   font-family: "Pretendard";
   font-size: 18px;

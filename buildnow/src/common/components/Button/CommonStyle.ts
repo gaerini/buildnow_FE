@@ -69,6 +69,6 @@ export const smallStyledIconWrapper = styled(StyledIconWrapper)`
     height: 0.6rem;
     stroke-width: 1;
   }
-`
+`;
 
 export { baseButtonStyles, hoverEffect, smallButtonStyles };
