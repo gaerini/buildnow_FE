@@ -1,5 +1,7 @@
 import { useState } from "react";
 import * as S from "./style";
+import SubConFinanceInfo from "../SubConFinanceInfo/SubConFinanceInfo";
+import SubConPatentCertifInfo from "../SubConPatentCertiInfo/SubConPatentCertiInfo";
 
 // Define the tab names
 const tabNames = {
@@ -29,10 +31,10 @@ const CompanyPage = ({ companyName }: CompanyPageProps) => {
         return <>{companyName} 기업개요 상세 페이지</>;
       case "finance":
         console.log(`${companyName} 재무부문 상세 페이지`);
-        return <>{companyName} 재무부문 상세페이지</>;
+        return <SubConFinanceInfo />;
       case "tech":
         console.log(`${companyName} 기술 및 인증 상세 페이지`);
-        return <>{companyName} 기술 및 인증 현황 상세페이지</>;
+        return <SubConPatentCertifInfo />;
       case "performance":
         console.log(`${companyName} 기업개시공실적요 상세 페이지`);
         return <>{companyName} 시공실적 상세페이지</>;

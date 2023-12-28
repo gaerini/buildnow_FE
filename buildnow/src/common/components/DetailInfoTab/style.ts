@@ -5,9 +5,9 @@ export const PageContainer = styled.div`
   flex-direction: column;
   align-items: flex-start; // Align to the left
   justify-content: flex-start;
-  padding: 20px;
   background-color: #f7f7f7;
   min-height: 100vh;
+  max-width: 74rem;
   width: 100%;
   padding: 1rem 1rem;
 `;
@@ -16,21 +16,19 @@ export const CompanyNameContainer = styled.h1`
   font-size: 2rem;
   color: #333;
   margin-bottom: 1rem;
-  margin-left: 1.5%;
-  margin-right: 1.5%;
-  width: 97%;
+  margin-left: 2rem;
+  width: 70rem;
 `;
-
 
 export const TabsContainer = styled.div`
   display: flex;
   justify-content: flex-start;
-  font-size: 1.25rem;
+  font-size: 1.7rem;
   padding-right: 1.25rem; // Padding to ensure it doesn't stretch too far
   margin-bottom: 0; // No space between tabs and content, they are connected
   width: 97%;
-  margin-left: calc(1.5% + 10px);
-  margin-right: 1.5%;
+  margin-left: calc(2rem + 10px);
+  margin-right: 2rem;
 `;
 
 export const Tab = styled.button<{ isActive: boolean }>`
@@ -49,13 +47,17 @@ export const Tab = styled.button<{ isActive: boolean }>`
 `;
 
 export const ContentContainer = styled.div`
-  padding: 20px;
+  display: flex; // Use flexbox layout
+  flex-direction: column; // Stack children vertically
+  align-items: center; // Center children horizontally
+  padding: 1rem 0rem;
   border-radius: 0.75rem; // Rounded corners
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   background-color: #fff;
-  width: 97%; // Full width to align with the PageContainer
-  margin-left: 1.5%;
-  margin-right: 1.5%;
+  width: 70rem; // Full width to align with the PageContainer
+  margin-left: 2rem;
+  margin-right: 2rem;
   box-sizing: border-box; // Include padding in width
   margin-top: -1px; // Connect with the TabsContainer
+  align-items: center;
 `;

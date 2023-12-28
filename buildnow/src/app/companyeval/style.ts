@@ -9,7 +9,7 @@ export const EvalBar = styled.div`
   top: 0; // 상단과의 거리
   right: 0; // 우측과의 거리
   bottom: 0; // 하단과의 거리
-  width: 30%; // 너비는 전체 화면의 30%
+  width: 25%; // 너비는 전체 화면의 30%
   padding: 3em 0em; // 상단 버튼에 대한 상단 패딩, 하단 버튼에 대한 하단 패딩
   background: #f9fafa;
   font-family: "Pretendard";
