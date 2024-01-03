@@ -14,24 +14,29 @@ const SubConFinanceInfo = () => {
       <S.TableComponent>
         <S.TableTitle>이크레더블 등급</S.TableTitle>
         <S.Container>
-          <S.SmallIndividualTableContainer>
-            <SmallSizeTable name="신용 등급" data={financeInfo["신용등급"]} />
-          </S.SmallIndividualTableContainer>
-          <S.SmallIndividualTableContainer>
-            <SmallSizeTable
-              name="현급 흐름 등급"
-              data={financeInfo["현금흐름등급"]}
-            />
-          </S.SmallIndividualTableContainer>
-          <S.SmallIndividualTableContainer>
-            <SmallSizeTable name="WATCH 등급" data={financeInfo["WATCH등급"]} />
-          </S.SmallIndividualTableContainer>
-          <S.SmallIndividualTableContainer>
-            <SmallSizeTable
-              name="자금 조달 여력 분석"
-              data={financeInfo["자금조달여력분석"]}
-            />
-          </S.SmallIndividualTableContainer>
+          <S.SmallContainer>
+            <S.SmallIndividualTableContainer>
+              <SmallSizeTable name="신용 등급" data={financeInfo["신용등급"]} />
+            </S.SmallIndividualTableContainer>
+            <S.SmallIndividualTableContainer>
+              <SmallSizeTable
+                name="현급 흐름 등급"
+                data={financeInfo["현금흐름등급"]}
+              />
+            </S.SmallIndividualTableContainer>
+            <S.SmallIndividualTableContainer>
+              <SmallSizeTable
+                name="WATCH 등급"
+                data={financeInfo["WATCH등급"]}
+              />
+            </S.SmallIndividualTableContainer>
+            <S.SmallIndividualTableContainer>
+              <SmallSizeTable
+                name="자금 조달 여력 분석"
+                data={financeInfo["자금조달여력분석"]}
+              />
+            </S.SmallIndividualTableContainer>
+          </S.SmallContainer>
         </S.Container>
       </S.TableComponent>
 

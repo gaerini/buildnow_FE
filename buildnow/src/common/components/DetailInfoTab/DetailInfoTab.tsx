@@ -2,6 +2,7 @@ import { useState } from "react";
 import * as S from "./style";
 import SubConFinanceInfo from "../SubConFinanceInfo/SubConFinanceInfo";
 import SubConPatentCertifInfo from "../SubConPatentCertiInfo/SubConPatentCertiInfo";
+import SubConPerformanceInfo from "../SubConPerformanceInfo/SubConPerformanceInfo";
 
 // Define the tab names
 const tabNames = {
@@ -23,6 +24,8 @@ type CompanyPageProps = {
 const CompanyPage = ({ companyName }: CompanyPageProps) => {
   const [activeTab, setActiveTab] = useState<TabKey>("overview");
 
+  // TODO : 밑에서 페이지 렌더링 하는 부분 나중에 {companyName}을 prop으로 받아서 호출하는 형태로 수정해야함
+
   // Function to render the content based on the active tab
   const renderContent = () => {
     switch (activeTab) {
@@ -37,7 +40,7 @@ const CompanyPage = ({ companyName }: CompanyPageProps) => {
         return <SubConPatentCertifInfo />;
       case "performance":
         console.log(`${companyName} 기업개시공실적요 상세 페이지`);
-        return <>{companyName} 시공실적 상세페이지</>;
+        return <SubConPerformanceInfo />;
       case "others":
         console.log(`${companyName} 기타 상세 페이지`);
         return <>{companyName} 기타 상세페이지</>;

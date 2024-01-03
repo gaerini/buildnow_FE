@@ -2,15 +2,15 @@
 
 import React from "react";
 //Component
-import EvalBar from "../../common/components/EvalBar/EvalBar";
-import EvalContent from "../../common/components/EvalContent/EvalContent";
+import EvalBar from "../../common/components/CompanyEvalRightBar/EvalBar/EvalBar";
+import EvalContent from "../../common/components/CompanyEvalRightBar/EvalContent/EvalContent";
 import CorrectScoreCardButton from "@/common/components/Button/CorrectScoreCardButton/CorrectScoreCardButton";
 import ReviewCompleteButton from "@/common/components/Button/ReviewCompleteButton/ReviewCompleteButton";
 //Icon
-import OverallIcon from "../../common/components/EvalContent/overall.svg";
-import Finance from "../../common/components/EvalContent/finance.svg";
-import EsgSafety from "../../common/components/EvalContent/esgSafety.svg";
-import Record from "../../common/components/EvalContent/record.svg";
+import OverallIcon from "../../common/components/CompanyEvalRightBar/EvalContent/overall.svg";
+import Finance from "../../common/components/CompanyEvalRightBar/EvalContent/finance.svg";
+import EsgSafety from "../../common/components/CompanyEvalRightBar/EvalContent/esgSafety.svg";
+import Record from "../../common/components/CompanyEvalRightBar/EvalContent/record.svg";
 
 import * as S from "./style";
 
