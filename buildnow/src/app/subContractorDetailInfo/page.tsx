@@ -7,7 +7,7 @@ import WorkTypeDropDown from "@/common/components/WorkTypeDropDown/WorkTypeDropD
 import CompanyEvalPage from "../companyeval/page";
 import ComapynInfo from "../companyInfo/page";
 import LeftNavBar from "@/common/components/LeftNavBar/LeftNavBar";
-
+import CompanyEvalRightBar from "@/common/components/CompanyEvalRightBar/CompanyEvalRightBar";
 // mockData에서 companyName 받아와야함!
 const data = require("../../../mock/subcontractorInfo.json");
 // 인터페이스를 정의하여 각 속성의 타입을 지정합니다.
@@ -61,16 +61,17 @@ const subConData = {
 
 export default function subContractorDetailInfo() {
   return (
-    // <div style={{ display: "flex", alignItems: "center" }}>
-    //   <LeftNavBar
-    //     company="빌드나우"
-    //     companyLogoImg="{data.companyLogoImg}"
-    //     onChange={() => console.log("dafasdf")}
-    //   />
+    <div style={{ display: "flex", alignItems: "center" }}>
+      {/* <LeftNavBar
+        company="빌드나우"
+        companyLogoImg="{data.companyLogoImg}"
+        onChange={() => console.log("dafasdf")}
+      /> */}
       <DetailInfoTab companyName="L이앤씨" />
-     //<SubContractorCard subConData={subConData} /> */}
-     // <WorkTypeDropDown /> */}
-    //   <CompanyEvalPage />
-    // </div>
+     {/* <SubContractorCard subConData={subConData} /> 
+     <WorkTypeDropDown /> */}
+      <CompanyEvalPage />
+      <CompanyEvalRightBar/>
+    </div>
   );
 }

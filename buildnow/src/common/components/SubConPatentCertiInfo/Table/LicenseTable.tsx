@@ -22,7 +22,7 @@ const LicenseTable: React.FC<LicenseTableProps> = ({ data }) => {
       <S.TableContainer>
         <thead>
           <S.TableRowHeader>
-            <S.TableHeaderData>id</S.TableHeaderData>
+            <S.TableHeaderData>번호</S.TableHeaderData>
             <S.TableHeaderData>구분</S.TableHeaderData>
             <S.TableHeaderData>면허명</S.TableHeaderData>
             <S.TableHeaderData>면허번호</S.TableHeaderData>

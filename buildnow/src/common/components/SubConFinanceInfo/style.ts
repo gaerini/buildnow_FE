@@ -18,11 +18,20 @@ export const TableComponent = styled.div`
 export const Container = styled.div`
   display: flex;
   flex-wrap: wrap; // Allows child elements to wrap onto the next line
-  align-items: flex-start;
+  align-items: center;
+  justify-content: center;
   width: 60rem;
   padding: 1rem 0rem // Updated to add padding on all sides
   border-radius: 0.25rem;
   box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.1);
+`;
+
+export const SmallContainer = styled.div`
+  display: flex;
+  align-items: center;
+  width: 53.9rem;
+  border-radius: 0.25rem;
+  background-color: none;
 `;
 
 export const LargeContainer = styled.div`
@@ -43,14 +52,6 @@ export const SmallIndividualTableContainer = styled.div`
   height: 10rem;
   width: 25%;
   margin: 2rem 0rem;
-
-  &:first-child() {
-    margin-left: 5%;
-  }
-
-  &:last-child() {
-    margin-right: 5%;
-  }
 `;
 export const MiddleIndividualTableContainer = styled.div`
   display: flex;

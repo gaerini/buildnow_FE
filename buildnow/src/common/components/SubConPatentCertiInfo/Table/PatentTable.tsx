@@ -20,7 +20,7 @@ const PatentTable: React.FC<PatentTableProps> = ({ data }) => {
       <S.TableContainer>
         <thead>
           <S.TableRowHeader>
-            <S.TableHeaderData>id</S.TableHeaderData>
+            <S.TableHeaderData>번호</S.TableHeaderData>
             <S.TableHeaderData>구분</S.TableHeaderData>
             <S.TableHeaderData>특허명</S.TableHeaderData>
             <S.TableHeaderData>출원번호</S.TableHeaderData>
