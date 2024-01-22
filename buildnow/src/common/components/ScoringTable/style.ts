@@ -7,12 +7,12 @@ type objType = {
 
 const standard: objType = {
   companyname: "",
-  operation: 25,
+  operation: 8,
   finance: 20,
-  esg_safety: 10,
-  others: 0,
+  esg_safety: 5,
+  performance: 20,
   total: 75,
-  result: "",
+  result: "탈락",
   state: "",
 };
 
@@ -41,10 +41,16 @@ export const table = styled.table`
 export const Th = styled.th<CellProps>`
   border-top: 0.5px solid #dddddd;
   border-bottom: 0.5px solid #dddddd;
-  ${({ columname }) =>
-    columname === "total" || columname === "result" || columname === "state"
-      ? "text-align: center; border-left: 2px dotted #dddddd;"
-      : "text-align: left;"};
+  text-align: ${({ columname }) =>
+    columname === "total" || columname === "result" || columname === "details"
+      ? "center"
+      : "left"};
+  border-left: ${({ columname }) =>
+    columname === "total" || columname === "result" || columname === "details"
+      ? "2px dotted #dddddd"
+      : ""};
+  width: ${({ columname }) =>
+    columname === "total" || columname === "result" ? "100px" : ""};
   padding: 10px;
   background-color: #f5f7fa; /* 회색 배경 */
 `;
@@ -52,10 +58,16 @@ export const Th = styled.th<CellProps>`
 export const Td = styled.td<CellProps>`
   border-top: 0.5px solid #dddddd;
   border-bottom: 0.5px solid #dddddd;
-  ${({ columname }) =>
-    columname === "total" || columname === "result" || columname === "state"
-      ? "text-align: center; border-left: 2px dotted #dddddd;"
-      : "text-align: left;"};
+  text-align: ${({ columname }) =>
+    columname === "total" || columname === "result" || columname === "details"
+      ? "center"
+      : "left"};
+  border-left: ${({ columname }) =>
+    columname === "total" || columname === "result" || columname === "details"
+      ? "2px dotted #dddddd"
+      : ""};
+  width: ${({ columname }) =>
+    columname === "total" || columname === "result" ? "100px" : ""};
   padding: 10px;
 `;
 
@@ -72,16 +84,21 @@ export const contentLetter = styled.div<ScoreBoxProps>`
   font-size: 14px;
   font-weight: 200;
   color: ${({ column, score }) => {
-    const scoreNum = score ? parseInt(score) : 0; // 문자열을 숫자로 변환
-    const standardScore = Number(standard[column]);
     if (
-      column === "total" &&
-      (Number(standard["operation"]) < 0 || Number(standard["finance"]) < 0)
+      column === "total" ||
+      column == "operation" ||
+      column == "finance" ||
+      column == "esg_safety" ||
+      column == "performance"
     ) {
-      return "#F56C6C"; // 조건에 따라 다른 색상 반환
+      const scoreNum = score ? parseInt(score) : 0; // 문자열을 숫자로 변환
+      const standardScore = Number(standard[column]);
+      return scoreNum < standardScore ? "#F56C6C" : "#409EFF"; // 기본 색상 반환
+    } else if (column === "result") {
+      const result = score ? String(score) : "";
+      const standardResult = String(standard[column]);
+      return result == standardResult ? "#F56C6C" : "#409EFF";
     }
-
-    return scoreNum < standardScore ? "#F56C6C" : "#409EFF"; // 기본 색상 반환
   }};
 
   ${({ column }) => {
@@ -92,7 +109,7 @@ export const contentLetter = styled.div<ScoreBoxProps>`
         font-weight: bold;
         margin-left: 5px;
       `;
-    } else if (column === "total") {
+    } else if (column === "total" || column === "result") {
       return `
         font-weight: bold;
       `;
