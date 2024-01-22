@@ -7,10 +7,10 @@ type TableData = {
   operation: string;
   finance: string;
   esg_safety: string;
-  others: string;
+  performance: string;
   total: string;
   result: string;
-  state: string;
+  details: string;
 };
 
 const TableComponent: React.FC<{ data: TableData[] }> = ({ data }) => {
@@ -33,8 +33,8 @@ const TableComponent: React.FC<{ data: TableData[] }> = ({ data }) => {
         accessor: "esg_safety" as keyof TableData,
       },
       {
-        Header: "기타",
-        accessor: "others" as keyof TableData,
+        Header: "시공실적",
+        accessor: "performance" as keyof TableData,
       },
       {
         Header: "총점수",
@@ -48,8 +48,8 @@ const TableComponent: React.FC<{ data: TableData[] }> = ({ data }) => {
         accessor: "result" as keyof TableData,
       },
       {
-        Header: "상태",
-        accessor: "state" as keyof TableData,
+        Header: "비고",
+        accessor: "details" as keyof TableData,
       },
     ],
     []
@@ -85,7 +85,7 @@ const TableComponent: React.FC<{ data: TableData[] }> = ({ data }) => {
                   cell.column.id === "operation" ||
                   cell.column.id === "finance" ||
                   cell.column.id === "esg_safety" ||
-                  cell.column.id === "others";
+                  cell.column.id === "performance";
                 return (
                   <S.Td
                     {...cell.getCellProps()}
