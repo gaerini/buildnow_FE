@@ -24,8 +24,12 @@ const getRankingText: React.FC<getRankingTextProps> = ({ ranking }) => {
   return "50%이외";
 };
 
-const AddressTag: React.FC<RankingTagProps> = ({ ranking }) => {
-  return <RankingTagStyled>{getRankingText({ ranking })}</RankingTagStyled>;
+const RankingTag: React.FC<RankingTagProps> = ({ ranking }) => {
+  return (
+    <RankingTagStyled rank={ranking}>
+      {getRankingText({ ranking })}
+    </RankingTagStyled>
+  );
 };
 
-export default AddressTag;
+export default RankingTag;

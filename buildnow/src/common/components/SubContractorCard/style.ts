@@ -38,7 +38,6 @@ export const Content = styled.div`
 
 export const CompanyName = styled.div`
   margin-left: 0.5rem;
-  margin-top: 0.2rem;
   font-size: 2rem;
   font-weight: bold;
   white-space: nowrap;
@@ -60,11 +59,16 @@ export const TagList = styled.div`
 `;
 
 const BaseTag = styled.span`
+  display: flex;
+  align-items: center; // 세로 중앙 정렬
+  justify-content: center; // 가로 중앙 정렬
   padding: 0.25rem 0.6rem;
   margin-right: 0.5rem;
   border-radius: 0.25rem;
-  font-size: 0.75rem;
+  font-size: 1rem;
   white-space: nowrap;
+  width: 6.3rem;
+  height: 1.1rem;
 `;
 
 export const WorkTypeTagStyled = styled(BaseTag)`
@@ -77,6 +81,7 @@ export const AddressTagStyled = styled(BaseTag)`
   background-color: #335c64;
   color: white;
   margin-right: 0.1rem;
+  align-items: center;
 `;
 
 const getRankStyles = (rank: number) => {
@@ -118,25 +123,19 @@ export const RankingTagStyled = styled(BaseTag)<{ rank: number }>`
 export const NewTagStyled = styled(BaseTag)`
   background-color: #d5e8ff;
   color: #409efe;
-  border-radius: 20px;
-  margin-top: 0.2rem;
-  margin-bottom: 0.1rem;
+  border-radius: 0.25rem;
 `;
 
 export const PatentTagStyled = styled(BaseTag)`
   background-color: #9170ff;
   color: white;
-  border-radius: 20px;
-  margin-top: 0.2rem;
-  margin-bottom: 0.1rem;
+  border-radius: 0.25rem;
 `;
 
 export const RecTagStyled = styled(BaseTag)`
   background-color: rgba(145, 112, 255, 0.3);
   color: #9170ff;
-  border-radius: 20px;
-  margin-top: 0.2rem;
-  margin-bottom: 0.1rem;
+  border-radius: 0.25rem;
 `;
 
 export const Divider = styled.hr`
