@@ -23,7 +23,6 @@ export const CompanyNameContainer = styled.h1`
 export const TabsContainer = styled.div`
   display: flex;
   justify-content: flex-start;
-  font-size: 1.7rem;
   padding-right: 1.25rem; // Padding to ensure it doesn't stretch too far
   margin-bottom: 0; // No space between tabs and content, they are connected
   width: 97%;
@@ -32,6 +31,7 @@ export const TabsContainer = styled.div`
 `;
 
 export const Tab = styled.button<{ isActive: boolean }>`
+  font-size: 1.25rem;
   padding: 0.625rem 1rem;
   margin-right: 5px; // Margin between tabs
   border: none; // No borders

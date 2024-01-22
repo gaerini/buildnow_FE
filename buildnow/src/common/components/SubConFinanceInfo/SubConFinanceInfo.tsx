@@ -1,13 +1,35 @@
 // SubConFinanceInfo.tsx
 import React, { useState, useEffect } from "react";
-import data from "../../../../mock/subcontractorInfo.json";
+import mockData from "../../../../mock/subcontractorInfo.json";
 import MiddleSizeTable from "./Table/MiddleSizeTable/MiddleSizeTable";
 import SmallSizeTable from "./Table/SmallSizeTable/SmallSizeTable";
 import * as S from "./style";
 import LargeSizeTable from "./Table/LargeSizeTable/LargeSizeTable";
 
-const SubConFinanceInfo = () => {
-  const financeInfo = data["재무 부문"];
+// Props 타입 정의
+interface SubConFinanceInfoProps {
+  companyName: string;
+}
+
+const SubConFinanceInfo: React.FC<SubConFinanceInfoProps> = ({
+  companyName,
+}) => {
+  const [financeInfo, setFinanceInfo] = useState<any>(null);
+
+  useEffect(() => {
+    // companyName과 일치하는 데이터를 찾습니다.
+    const dataItem = mockData.find(
+      (item) => item["기업 개요"]["companyName"] === companyName
+    );
+    if (dataItem) {
+      setFinanceInfo(dataItem["재무 부문"]);
+    }
+  }, [companyName]);
+
+  // financeInfo가 없으면 아무 것도 렌더링하지 않음
+  if (!financeInfo) {
+    return <div>Loading or no data found...</div>;
+  }
 
   return (
     <>
