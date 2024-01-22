@@ -32,14 +32,14 @@ const data = require("../../../mock/subcontractorInfo.json");
 export default function subContractorDetailInfo() {
   return (
     <div style={{ display: "flex", alignItems: "center" }}>
-      {/* <LeftNavBar
+      <LeftNavBar
         company="빌드나우"
         companyLogoImg="{data.companyLogoImg}"
         onChange={() => console.log("dafasdf")}
-      /> */}
+      />
       <DetailInfoTab companyName="L이앤씨" />
-      <EvalQueue />
-      <CompanyEvalRightBar />
+      {/* <EvalQueue />
+      <CompanyEvalRightBar /> */}
     </div>
   );
 }

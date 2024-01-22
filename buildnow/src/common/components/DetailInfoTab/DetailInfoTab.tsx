@@ -1,5 +1,13 @@
 import { useState } from "react";
+import React from "react";
+import WorkTypeTag from "../SubContractorCard/Tags/WorkType";
+import AddressTag from "../SubContractorCard/Tags/AddressTag";
+import RankingTag from "../SubContractorCard/Tags/RankingTag";
+import NewTag from "../SubContractorCard/Tags/NewTag";
+import PatentTag from "../SubContractorCard/Tags/PatentTag";
+import RecTag from "../SubContractorCard/Tags/RecTag";
 import * as S from "./style";
+import simpleInfo from "../../../../mock/simpleInfo.json";
 import SubConFinanceInfo from "../SubConFinanceInfo/SubConFinanceInfo";
 import SubConPatentCertifInfo from "../SubConPatentCertiInfo/SubConPatentCertiInfo";
 import SubConPerformanceInfo from "../SubConPerformanceInfo/SubConPerformanceInfo";
@@ -7,10 +15,11 @@ import SubConPerformanceInfo from "../SubConPerformanceInfo/SubConPerformanceInf
 // Define the tab names
 const tabNames = {
   overview: "기업개요",
+  operation: "경영일반",
   finance: "재무부문",
   tech: "기술 및 인증 현황",
   performance: "시공실적",
-  others: "기타",
+  // others: "기타",
 };
 
 // Create a type for the tab keys
@@ -24,26 +33,39 @@ type CompanyPageProps = {
 const CompanyPage = ({ companyName }: CompanyPageProps) => {
   const [activeTab, setActiveTab] = useState<TabKey>("overview");
 
-  // TODO : 밑에서 페이지 렌더링 하는 부분 나중에 {companyName}을 prop으로 받아서 호출하는 형태로 수정해야함
+  const subConData = simpleInfo.find(
+    (item) => item.companyName === companyName
+  );
+
+  if (!subConData) return <div>데이터를 찾을 수 없습니다.</div>;
+
+  const ranking = parseFloat(subConData.시평액.replace("%", "")); // "%" 제거 후 숫자 변환
 
   // Function to render the content based on the active tab
   const renderContent = () => {
     switch (activeTab) {
       case "overview":
         console.log(`${companyName} 기업개요 상세 페이지`);
-        return <>{companyName} 기업개요 상세 페이지</>;
+        return <>{companyName} SubConOverview.tsx 쓰면 됨</>;
+      case "operation":
+        console.log(`${companyName} 경영일반 상세 페이지`);
+        return <>{companyName} 경영일반 상세페이지</>;
+      // return <SubConFinanceInfo companyName="L이앤씨" />;
       case "finance":
         console.log(`${companyName} 재무부문 상세 페이지`);
-        return <SubConFinanceInfo companyName="L이앤씨" />;
+        return <>{companyName} 재무부문 상세페이지</>;
+      // return <SubConFinanceInfo companyName="L이앤씨" />;
       case "tech":
         console.log(`${companyName} 기술 및 인증 상세 페이지`);
-        return <SubConPatentCertifInfo companyName="L이앤씨"/>;
+        return <>{companyName} 기술 및 인증 상세페이지</>;
+      // return <SubConPatentCertifInfo companyName="L이앤씨" />;
       case "performance":
-        console.log(`${companyName} 기업개시공실적요 상세 페이지`);
-        return <SubConPerformanceInfo companyName="L이앤씨" />;
-      case "others":
-        console.log(`${companyName} 기타 상세 페이지`);
-        return <>{companyName} 기타 상세페이지</>;
+        console.log(`${companyName} 기업 시공실적 상세 페이지`);
+        return <>{companyName} 시공실적 상세페이지</>;
+      // return <SubConPerformanceInfo companyName="L이앤씨" />;
+      // case "others":
+      //   console.log(`${companyName} 기타 상세 페이지`);
+      //   return <>{companyName} 기타 상세페이지</>;
       default:
         return "내용을 선택해주세요.";
     }
@@ -51,7 +73,25 @@ const CompanyPage = ({ companyName }: CompanyPageProps) => {
 
   return (
     <S.PageContainer>
-      <S.CompanyNameContainer>{companyName}</S.CompanyNameContainer>
+      <S.CompanyNameContainer>
+        <S.InfoContainer>
+          <S.CompanyLabel>업체명</S.CompanyLabel>
+          <S.CompanyName>{companyName}</S.CompanyName>
+        </S.InfoContainer>
+        <S.TagAndResultContainer>
+          <S.TagContainer>
+            {subConData.신규 && <NewTag />}
+            <AddressTag address={subConData.소재지} />
+            <RankingTag ranking={ranking} />
+          </S.TagContainer>
+          <S.ResultContainer>
+            <S.Score>{subConData.점수}점</S.Score>
+            <S.PassStatus isPassed={subConData.통과여부}>
+              {subConData.통과여부 ? "통 과" : "탈 락"}
+            </S.PassStatus>
+          </S.ResultContainer>
+        </S.TagAndResultContainer>
+      </S.CompanyNameContainer>
       <S.TabsContainer>
         {(Object.keys(tabNames) as TabKey[]).map((tabKey) => (
           <S.Tab
