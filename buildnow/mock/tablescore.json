@@ -1,67 +1,101 @@
 [
   {
     "companyname": "L이앤씨",
-    "operation": "29 / 40",
+    "operation": "11 / 15",
     "finance": "32 / 40",
-    "esg_safety": "18 / 40",
-    "others": "+14",
-    "total": "93",
-    "state": "통과"
+    "esg_safety": "8 / 10",
+    "performance": "18 / 35",
+    "total": "69",
+    "result": "탈락"
   },
   {
     "companyname": "ㄹ건설",
-    "operation": "37 / 40",
+    "operation": "10 / 15",
     "finance": "33 / 40",
-    "esg_safety": "17 / 40",
-    "others": "-",
-    "total": "88"
+    "esg_safety": "5 / 10",
+    "performance": "33 / 35",
+    "total": "81",
+    "result": "통과"
   },
   {
     "companyname": "ㄱ건설",
-    "operation": "35 / 40",
+    "operation": "14 / 15",
     "finance": "36 / 40",
-    "esg_safety": "19 / 40",
-    "others": "-4",
-    "total": "86"
+    "esg_safety": "8 / 10",
+    "performance": "21 / 35",
+    "total": "79",
+    "result": "통과"
   },
   {
     "companyname": "ㅅ기술",
-    "operation": "26 / 40",
-    "finance": "29 / 40",
-    "esg_safety": "16 / 40",
-    "others": "-1",
-    "total": "81"
+    "operation": "6 / 15",
+    "finance": "33 / 40",
+    "esg_safety": "4 / 10",
+    "performance": "23 / 35",
+    "total": "66",
+    "result": "탈락"
   },
   {
     "companyname": "A산업개발",
-    "operation": "32 / 40",
+    "operation": "12 / 15",
     "finance": "28 / 40",
-    "esg_safety": "12 / 40",
-    "others": "+2",
-    "total": "74"
+    "esg_safety": "8 / 10",
+    "performance": "28 / 35",
+    "total": "76",
+    "result": "통과"
   },
   {
     "companyname": "B건설",
-    "operation": "22 / 40",
-    "finance": "26 / 40",
-    "esg_safety": "16 / 40",
-    "others": "+5",
-    "total": "77"
+    "operation": "8 / 15",
+    "finance": "19 / 40",
+    "esg_safety": "10 / 10",
+    "performance": "28 / 35",
+    "total": "65",
+    "result": "탈락"
   },
   {
     "companyname": "F토건",
-    "operation": "26 / 40",
+    "operation": "12 / 15",
     "finance": "32 / 40",
-    "esg_safety": "11 / 40",
-    "others": "-3",
-    "total": "66"
+    "esg_safety": "8 / 10",
+    "performance": "28 / 35",
+    "total": "80",
+    "result": "통과"
   },
   {
     "companyname": "C개발",
-    "operation": "25 / 40",
-    "finance": "25 / 40",
-    "esg_safety": "14 / 40",
-    "others": "-",
-    "total": "64"
+    "operation": "14 / 15",
+    "finance": "29 / 40",
+    "esg_safety": "8 / 10",
+    "performance": "17 / 35",
+    "total": "68",
+    "result": "탈락"
+  },
+  {
+    "companyname": "C개발",
+    "operation": "14 / 15",
+    "finance": "29 / 40",
+    "esg_safety": "8 / 10",
+    "performance": "17 / 35",
+    "total": "68",
+    "result": "탈락"
+  },
+  {
+    "companyname": "C개발",
+    "operation": "14 / 15",
+    "finance": "29 / 40",
+    "esg_safety": "8 / 10",
+    "performance": "17 / 35",
+    "total": "68",
+    "result": "탈락"
+  },
+  {
+    "companyname": "C개발",
+    "operation": "14 / 15",
+    "finance": "29 / 40",
+    "esg_safety": "8 / 10",
+    "performance": "17 / 35",
+    "total": "68",
+    "result": "탈락"
   }
 ]
