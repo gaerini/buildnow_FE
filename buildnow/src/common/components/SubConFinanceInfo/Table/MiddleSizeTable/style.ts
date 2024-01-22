@@ -4,7 +4,6 @@ import * as Common from "../CommonStyle";
 
 export const MiddleTableContainer = styled.table`
   width: 24.25rem;
-  height: 5.875rem;
   border-collapse: collapse;
   border: none;
   box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.1);
@@ -12,7 +11,7 @@ export const MiddleTableContainer = styled.table`
 
 export const MiddleTableWrapper = styled.div`
   width: 24.25rem;
-  height: 5.875rem;
+  height : 20rem;
   border-radius: 0.25rem;
   overflow: hidden;
   border: 0.8px solid #8d8d8d;

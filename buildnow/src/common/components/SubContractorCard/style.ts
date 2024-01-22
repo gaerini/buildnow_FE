@@ -1,12 +1,12 @@
 import styled from "styled-components";
 
 export const Card = styled.div`
+  width: 22rem;
   background: white;
   border-radius: 0.3rem;
   box-shadow: 0 2px 0.25rem rgba(0, 0, 0, 0.1);
   font-family: "Arial", sans-serif;
-  height: 10rem;
-  aspect-ratio: 1.618 / 1;
+  height: 10rem;2
   white-space: nowrap;
   display: flex;
   flex-direction: column; // 자식 요소들을 세로로 쌓음

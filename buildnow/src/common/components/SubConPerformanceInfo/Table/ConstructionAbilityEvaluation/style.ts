@@ -32,7 +32,7 @@ font-size : 0.9rem;
   border: 1px dashed #d9d9d9;––
   background-color: none;
   border-bottom: none;
-  height : 1.5rem;
+  height : 1.7rem;
 
   &:first-child {
     border-left: none;
@@ -56,7 +56,7 @@ font-size : 0.9rem;
 `;
 
 export const TableHeaderData = styled.th`
-  font-size: 0.95rem;
+  font-size: 1rem;
   border: 1px dashed #d9d9d9;
   padding: 0.3rem;
   text-align: center;
@@ -64,7 +64,7 @@ export const TableHeaderData = styled.th`
   font-weight: normal;
   border-top: none;
   white-space: nowrap;
-  height: 1.2 rem;
+  height: 1.7 rem;
 
   &:first-child {
     border-left: none;

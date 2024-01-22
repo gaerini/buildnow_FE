@@ -34,13 +34,13 @@ const CompanyPage = ({ companyName }: CompanyPageProps) => {
         return <>{companyName} 기업개요 상세 페이지</>;
       case "finance":
         console.log(`${companyName} 재무부문 상세 페이지`);
-        return <SubConFinanceInfo />;
+        return <SubConFinanceInfo companyName="L이앤씨" />;
       case "tech":
         console.log(`${companyName} 기술 및 인증 상세 페이지`);
-        return <SubConPatentCertifInfo />;
+        return <SubConPatentCertifInfo companyName="L이앤씨"/>;
       case "performance":
         console.log(`${companyName} 기업개시공실적요 상세 페이지`);
-        return <SubConPerformanceInfo />;
+        return <SubConPerformanceInfo companyName="L이앤씨" />;
       case "others":
         console.log(`${companyName} 기타 상세 페이지`);
         return <>{companyName} 기타 상세페이지</>;
