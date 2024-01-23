@@ -7,6 +7,7 @@ export const PageContainer = styled.div`
   justify-content: flex-start;
   background-color: #f7f7f7;
   min-height: 100vh;
+  height : auto
   width: 71.6rem;
 `;
 
@@ -73,8 +74,8 @@ export const ContentContainer = styled.div`
   display: flex; // Use flexbox layout
   flex-direction: column; // Stack children vertically
   align-items: center; // Center children horizontally
-  height: 72rem;
-  padding: 1rem 0rem;
+  height: 67rem;
+  padding: 2rem 3rem;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   background-color: #fff;
   width: 69.6rem; // Full width to align with the PageContainer
