@@ -69,7 +69,7 @@ export const TableHeaderData = styled.th<{ isHeaderRow?: boolean }>`
 
 export const TableHeader = styled.div`
   width: 53.9rem;
-  font-size: 0.6rem;
+  font-size: 1rem;
   text-align: right;
   padding-right: 1rem;
   color: #333;
