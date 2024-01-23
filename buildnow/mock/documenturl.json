@@ -1,0 +1,28 @@
+[
+    {
+    "companyName":"L이앤씨",
+    "법인 등기부 등본": "/Users/choikyungsuk/Desktop/Buildnow/dev/FE/buildnow_FE/buildnow/mock/documents/법인등기부등본.pdf",
+    "사업자 등록증 사본":"/Users/choikyungsuk/Desktop/Buildnow/dev/FE/buildnow_FE/buildnow/mock/documents/사업자등록증.png",
+    "건설업 등록증":"/Users/choikyungsuk/Desktop/Buildnow/dev/FE/buildnow_FE/buildnow/mock/documents/건설업등록증.png",
+    "건설 수첩 사본":"/Users/choikyungsuk/Desktop/Buildnow/dev/FE/buildnow_FE/buildnow/mock/documents/건설업수첩 사본.pdf",
+    "납세(시,국세) 완납 증명서":"/Users/choikyungsuk/Desktop/Buildnow/dev/FE/buildnow_FE/buildnow/mock/documents/납세(시,국세)완남 증명서.pdf",
+    "회사 조직표":"/Users/choikyungsuk/Desktop/Buildnow/dev/FE/buildnow_FE/buildnow/mock/documents/회사조직표.png",
+    "제재처분 또는 행정 처분 확인서":"",
+    "중대재해이력 확인원":"",
+    "경영상태 확인원":"",
+    "회사 소개 자료(지명원, 카달로그 등)":"/Users/choikyungsuk/Desktop/Buildnow/dev/FE/buildnow_FE/buildnow/mock/documents/지명원.pdf",
+    "신용평가보고서":"/Users/choikyungsuk/Desktop/Buildnow/dev/FE/buildnow_FE/buildnow/mock/documents/신용평가보고서.pdf",
+    "건설업 면허증":"",
+    "특허증":"",
+    "기업 인증서":"",
+    "ISO 인증서":"",
+    "공사 실적":"/Users/choikyungsuk/Desktop/Buildnow/dev/FE/buildnow_FE/buildnow/mock/documents/공사실적.pdf",
+    "건설 공사 실적 확인서":"/Users/choikyungsuk/Desktop/Buildnow/dev/FE/buildnow_FE/buildnow/mock/documents/건설공사실적확인서.pdf",
+    "23년 시공능력평가 확인서":"/Users/choikyungsuk/Desktop/Buildnow/dev/FE/buildnow_FE/buildnow/mock/documents/2023 시공능력평가확인서.jpeg",
+    "23년 시공능력순위 확인서":"/Users/choikyungsuk/Desktop/Buildnow/dev/FE/buildnow_FE/buildnow/mock/documents/2023 시공능력순위확인서.png",
+    "22년 시공능력평가 확인서":"/Users/choikyungsuk/Desktop/Buildnow/dev/FE/buildnow_FE/buildnow/mock/documents/2022 시공능력평가확인서.jpeg",
+    "22년 시공능력순위 확인서":"/Users/choikyungsuk/Desktop/Buildnow/dev/FE/buildnow_FE/buildnow/mock/documents/2022 시공능력순위확인서.jpg",
+    "21년 시공능력평가 확인서":"/Users/choikyungsuk/Desktop/Buildnow/dev/FE/buildnow_FE/buildnow/mock/documents/2021 시공능력평가확인서.jpeg",
+    "21년 시공능력순위 확인서":"/Users/choikyungsuk/Desktop/Buildnow/dev/FE/buildnow_FE/buildnow/mock/documents/2021 시공능력순위 확인서.jpg"
+    }
+]

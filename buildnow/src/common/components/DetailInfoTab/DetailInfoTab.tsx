@@ -11,6 +11,8 @@ import simpleInfo from "../../../../mock/simpleInfo.json";
 import SubConFinanceInfo from "../SubConFinanceInfo/SubConFinanceInfo";
 import SubConPatentCertifInfo from "../SubConPatentCertiInfo/SubConPatentCertiInfo";
 import SubConPerformanceInfo from "../SubConPerformanceInfo/SubConPerformanceInfo";
+import SubConOverview from "../SubConOverview/SubConOverview";
+import OperationDoc from "../Document/OperationDoc";
 
 // Define the tab names
 const tabNames = {
@@ -46,10 +48,11 @@ const CompanyPage = ({ companyName }: CompanyPageProps) => {
     switch (activeTab) {
       case "overview":
         console.log(`${companyName} 기업개요 상세 페이지`);
-        return <>{companyName} SubConOverview.tsx 쓰면 됨</>;
+        return <SubConOverview companyName="L이앤씨" />;
       case "operation":
         console.log(`${companyName} 경영일반 상세 페이지`);
-        return <>{companyName} 경영일반 상세페이지</>;
+        return <OperationDoc companyName="L이앤씨" />;
+      // return <>{companyName} 경영일반 상세페이지</>;
       // return <SubConFinanceInfo companyName="L이앤씨" />;
       case "finance":
         console.log(`${companyName} 재무부문 상세 페이지`);
