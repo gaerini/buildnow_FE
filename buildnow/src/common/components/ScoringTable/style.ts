@@ -13,7 +13,6 @@ const standard: objType = {
   performance: 20,
   total: 75,
   result: "탈락",
-  state: "",
 };
 
 interface ScoreBoxProps {
@@ -28,11 +27,11 @@ interface CellProps {
 
 /* components/TableComponent.css */
 export const table = styled.table`
-  width: 80%;
+  width: 95%;
   border-collapse: separate;
   border-spacing: 0;
-  margin-left: 200px;
-  margin-top: 200px;
+  margin-left: 40px;
+  margin-top: 80px;
   border-radius: 5px;
   border: 0.5px solid #dddddd;
   overflow: hidden;
@@ -77,12 +76,15 @@ export const headerLetter = styled.div`
   font-size: 15px;
   font-weight: 600;
   color: black;
+  white-space: nowrap;
 `;
 
 export const contentLetter = styled.div<ScoreBoxProps>`
   font-family: "Pretendard";
   font-size: 14px;
   font-weight: 200;
+  white-space: nowrap;
+
   color: ${({ column, score }) => {
     if (
       column === "total" ||
@@ -127,6 +129,6 @@ export const ScoreBox = styled.div<ScoreBoxProps>`
   }};
   border-radius: 5px; /* 테두리 둥글게 */
   padding: 2px 8px; /* 패딩 */
-
+  white-space: nowrap;
   float: left;
 `;

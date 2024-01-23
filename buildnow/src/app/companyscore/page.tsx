@@ -2,19 +2,30 @@
 
 import React from "react";
 import TableComponent from "../../common/components/ScoringTable/ScoringTable";
+import ReviewScoreCardButton from "../../common/components/Button/ReviewScoreCardButton/ReviewScoreCardButton";
 
 type TableData = {
   companyname: string;
   operation: string;
   finance: string;
   esg_safety: string;
-  others: string;
+  performance: string;
   total: string;
   result: string;
-  state: string;
+  details: React.ReactNode;
 };
 
-const tableData: TableData[] = require("../../../mock/tablescore.json");
+// JSON 파일에서 데이터를 불러오고, React 컴포넌트로 변환하는 함수
+const loadAndTransformData = (TableData) => {
+  return TableData.map((item) => ({
+    ...item,
+    details: <ReviewScoreCardButton />, // React 컴포넌트로 details 필드를 대체
+  }));
+};
+
+const tableData: TableData[] = loadAndTransformData(
+  require("../../../mock/tablescore.json")
+);
 
 const HomePage: React.FC = () => {
   return <TableComponent data={tableData} />;

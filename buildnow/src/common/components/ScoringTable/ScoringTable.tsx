@@ -10,7 +10,7 @@ type TableData = {
   performance: string;
   total: string;
   result: string;
-  details: string;
+  details: React.ReactNode;
 };
 
 const TableComponent: React.FC<{ data: TableData[] }> = ({ data }) => {

@@ -53,16 +53,45 @@
 // ReviewScoreCardButtonStyle.ts
 import styled from "styled-components";
 import {
-  baseButtonStyles,
   hoverEffect,
-  StyledIconWrapper,
   smallButtonStyles,
   smallStyledIconWrapper,
 } from "../CommonStyle";
 
-export const StyledButton = styled(smallButtonStyles)`
+export const StyledButton = styled.div`
+  //폰트관련
+  font-size: 0.8rem;
+  font-family: "Pretendard";
+  font-weight: 400;
+  color: #606266;
+  white-space: nowrap;
+
+  //공간 여백 및 크기
+  padding: 0.5rem 0.5rem;
   border-radius: 0.25rem;
+  border: 1px solid #d9d9d9;
+  max-width: 10rem;
+  max-height: 1.5rem;
+  box-sizing: border-box;
+  margin: auto;
+
+  //텍스트얼라인, 아이콘과의 위치
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #eeeeef;
+
   ${hoverEffect}// Any additional specific styles here
 `;
 
-export const StyledIcon = styled(smallStyledIconWrapper)``;
+export const StyledIcon = styled(smallStyledIconWrapper)`
+  margin-right: 0.5rem;
+  svg {
+    stroke: #8d8d8d;
+    fill: #606266;
+    width: 0.8rem;
+    height: 0.8rem;
+    stroke-width: 1;
+  }
+`;

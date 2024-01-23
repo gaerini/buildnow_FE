@@ -20,7 +20,6 @@ const baseButtonStyles = styled.button<CommonButtonProps>`
   max-width: 10rem;
   max-height: 2rem;
   height: auto;
-  white-space: nowrap;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 `;
 
