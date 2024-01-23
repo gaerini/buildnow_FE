@@ -18,7 +18,7 @@ const History = ({ companyName }: HistoryProps) => {
 
   return (
     <S.OtherTable>
-      <S.Timeline/>
+      {isClient && <S.Timeline />}
 
       <tbody>
         {companyData &&
