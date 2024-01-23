@@ -30,16 +30,5 @@ const data = require("../../../mock/subcontractorInfo.json");
 
 // 추출한 데이터를 SubConData 인터페이스 타입의 객체로 저장합니다.
 export default function subContractorDetailInfo() {
-  return (
-    <div style={{ display: "flex", alignItems: "center" }}>
-      <LeftNavBar
-        company="빌드나우"
-        companyLogoImg="{data.companyLogoImg}"
-        onChange={() => console.log("dafasdf")}
-      />
-      <DetailInfoTab companyName="L이앤씨" />
-      {/* <EvalQueue />
-      <CompanyEvalRightBar /> */}
-    </div>
-  );
+  return <DetailInfoTab companyName="L이앤씨" />;
 }

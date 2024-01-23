@@ -1,8 +1,9 @@
 // TableStyle.ts
+"use client";
 import styled from "styled-components";
 
 export const TableWrapper = styled.div`
-  width: 53.9rem;
+  width: 60rem;
   border-radius: 0.3rem;
   overflow: hidden;
   border: 0.8px solid #8d8d8d;
@@ -11,7 +12,7 @@ export const TableWrapper = styled.div`
 `;
 
 export const TableContainer = styled.table`
-  width: 53.9rem;
+  width: 60rem;
   border-collapse: collapse;
   border: none;
   box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.1);
@@ -19,6 +20,7 @@ export const TableContainer = styled.table`
 
 export const TableRowHeader = styled.tr`
   font-weight: bold;
+  height: 2rem;
   &:first-child {
     background-color: #f9fafa;
   }
@@ -61,7 +63,7 @@ export const TableHeaderData = styled.th`
   font-weight: normal;
   border-top: none;
   white-space: nowrap;
-  height: 1.7rem;
+  height: 2rem;
 
   &:first-child {
     border-left: none;

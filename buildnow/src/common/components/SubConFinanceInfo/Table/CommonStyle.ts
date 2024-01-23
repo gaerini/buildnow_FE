@@ -1,3 +1,4 @@
+"use client";
 // CommonStyle.ts
 import styled from "styled-components";
 

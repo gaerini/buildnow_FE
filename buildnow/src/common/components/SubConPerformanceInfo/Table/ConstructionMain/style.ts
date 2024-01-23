@@ -1,8 +1,9 @@
 // TableStyle.ts
+"use client";
 import styled from "styled-components";
 
 export const TableWrapper = styled.div`
-  width: 53.9rem;
+  width: 60rem;
   display: flex; // Use flexbox to layout the two tables
   justify-content: space-between; // Space out the tables
   align-items: flex-start; // Align tables to the top

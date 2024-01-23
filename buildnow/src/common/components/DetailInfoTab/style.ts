@@ -1,3 +1,4 @@
+"use client";
 import styled from "styled-components";
 
 export const PageContainer = styled.div`
@@ -85,6 +86,10 @@ export const ContentContainer = styled.div`
   margin-left: 1rem;
   align-items: center;
   border-radius: 0 0 0 1rem;
+  overflow-y: auto;
+  &::-webkit-scrollbar {
+    width: 5px; // Adjust the width as needed
+  }
 `;
 
 export const TagAndResultContainer = styled.div`
@@ -117,4 +122,13 @@ export const PassStatus = styled.div<{ isPassed: boolean }>`
   font-weight: 550; // 글꼴 굵기 변경
   color: ${(props) => (props.isPassed ? "#409EFF" : "#F56C6C")}; // 색상 변경
   letter-spacing: 0.1em; // 문자 사이 간격 추가
+`;
+
+export const VerticalContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  & > *:not(:last-child) {
+    margin-bottom: 3rem;
+  }
 `;

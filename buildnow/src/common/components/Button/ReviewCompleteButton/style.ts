@@ -1,4 +1,5 @@
 // ReviewCompleteButtonStyle.ts
+"use client"
 import styled from "styled-components";
 import { baseButtonStyles, hoverEffect } from "../CommonStyle";
 

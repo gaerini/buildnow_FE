@@ -13,6 +13,9 @@ import SubConPatentCertifInfo from "../SubConPatentCertiInfo/SubConPatentCertiIn
 import SubConPerformanceInfo from "../SubConPerformanceInfo/SubConPerformanceInfo";
 import SubConOverview from "../SubConOverview/SubConOverview";
 import OperationDoc from "../Document/OperationDoc";
+import FinanceDoc from "../Document/FinanceDoc";
+import PatentCertiDoc from "../Document/PatentCertiDoc";
+import PerformanceDoc from "../Document/PerformanceDoc";
 
 // Define the tab names
 const tabNames = {
@@ -48,24 +51,39 @@ const CompanyPage = ({ companyName }: CompanyPageProps) => {
     switch (activeTab) {
       case "overview":
         console.log(`${companyName} 기업개요 상세 페이지`);
-        return <SubConOverview companyName="L이앤씨" />;
+        return <SubConOverview companyName={companyName} />;
       case "operation":
         console.log(`${companyName} 경영일반 상세 페이지`);
-        return <OperationDoc companyName="L이앤씨" />;
+        return <OperationDoc companyName={companyName} />;
       // return <>{companyName} 경영일반 상세페이지</>;
-      // return <SubConFinanceInfo companyName="L이앤씨" />;
+      // return <SubConFinanceInfo companyName={companyName} />;
       case "finance":
         console.log(`${companyName} 재무부문 상세 페이지`);
-        return <>{companyName} 재무부문 상세페이지</>;
-      // return <SubConFinanceInfo companyName="L이앤씨" />;
+        // return <>{companyName} 재무부문 상세페이지</>;
+        return (
+          <S.VerticalContainer>
+            <FinanceDoc companyName={companyName} />
+            <SubConFinanceInfo companyName={companyName} />
+          </S.VerticalContainer>
+        );
       case "tech":
         console.log(`${companyName} 기술 및 인증 상세 페이지`);
-        return <>{companyName} 기술 및 인증 상세페이지</>;
-      // return <SubConPatentCertifInfo companyName="L이앤씨" />;
+        // return <>{companyName} 기술 및 인증 상세페이지</>;
+        return (
+          <S.VerticalContainer>
+            <PatentCertiDoc companyName={companyName} />
+            <SubConPatentCertifInfo companyName={companyName} />
+          </S.VerticalContainer>
+        );
       case "performance":
         console.log(`${companyName} 기업 시공실적 상세 페이지`);
-        return <>{companyName} 시공실적 상세페이지</>;
-      // return <SubConPerformanceInfo companyName="L이앤씨" />;
+        // return <>{companyName} 시공실적 상세페이지</>;
+        return (
+          <S.VerticalContainer>
+            <PerformanceDoc companyName={companyName} />
+            <SubConPerformanceInfo companyName={companyName} />
+          </S.VerticalContainer>
+        );
       // case "others":
       //   console.log(`${companyName} 기타 상세 페이지`);
       //   return <>{companyName} 기타 상세페이지</>;

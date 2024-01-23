@@ -1,6 +1,7 @@
+"use client";
 // SmallTableStyle.ts
-import styled from 'styled-components';
-import * as Common from '../CommonStyle';
+import styled from "styled-components";
+import * as Common from "../CommonStyle";
 
 export const SmallTableContainer = styled.table`
   height: 10rem;
