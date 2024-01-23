@@ -1,3 +1,4 @@
+"use client";
 import styled from "styled-components";
 
 export const Table = styled.table`
@@ -25,7 +26,7 @@ export const TableCell = styled.td<TableCellProps>`
   border: dashed 0.05rem #d9d9d9;
   text-align: center;
   padding: 0.5rem;
-  border-bottom : none;
+  border-bottom: none;
 
   &:not(:last-child) {
     border-right: none;

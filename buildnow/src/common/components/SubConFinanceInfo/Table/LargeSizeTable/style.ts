@@ -1,3 +1,4 @@
+"use client";
 // LargeTableStyle.ts
 import styled from "styled-components";
 import { TableRow } from "../CommonStyle";
