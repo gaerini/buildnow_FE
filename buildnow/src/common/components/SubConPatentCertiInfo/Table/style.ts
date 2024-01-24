@@ -3,7 +3,7 @@
 import styled from "styled-components";
 
 export const TableWrapper = styled.div`
-  width: 53.9rem;
+  width: 60rem;
   height: 12.25rem;
   border-radius: 0.25rem;
   overflow: hidden;
@@ -13,7 +13,7 @@ export const TableWrapper = styled.div`
 `;
 
 export const TableContainer = styled.table`
-  width: 53.9rem;
+  width: 60rem;
   height: 12.25rem;
   border-collapse: collapse;
   border: none;
@@ -28,7 +28,7 @@ export const TableRowHeader = styled.tr`
 `;
 
 export const TableData = styled.td`
-font-size : 0.9rem;
+font-size : 1rem;
   padding: 0.5rem;
   text-align: center;
   color: #335C64;
@@ -47,12 +47,12 @@ font-size : 0.9rem;
 `;
 
 export const TableHeaderData = styled.th`
-  font-size: 0.95rem;
+  font-size: 1rem;
   border: 1px dashed #d9d9d9;
   padding: 0.5rem;
   text-align: center;
   background-color: #f9fafa;
-  font-weight: normal;
+  font-weight: 450;
   border-top: none;
 
   &:first-child {

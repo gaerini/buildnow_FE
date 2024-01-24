@@ -114,7 +114,6 @@ export const Score = styled.div`
   font-size: 2.3rem; // 글꼴 크기 증가
   font-weight: 550; // 글꼴 굵기 변경
   margin-bottom: 0.5rem;
-  letter-spacing: 0.1em; // 문자 사이 간격 추가
 `;
 
 export const PassStatus = styled.div<{ isPassed: boolean }>`

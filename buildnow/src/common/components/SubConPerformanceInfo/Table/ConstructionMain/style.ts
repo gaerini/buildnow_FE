@@ -26,7 +26,7 @@ export const TableRowHeader = styled.tr`
 `;
 
 export const TableData = styled.td`
-  font-size : 1rem;
+  font-size : 1.2rem;
   padding: 0.3rem;
   text-align: center;
   color: #335C64;
@@ -49,7 +49,7 @@ export const TableData = styled.td`
 `;
 
 export const TableHeaderData = styled.th`
-  font-size: 0.95rem;
+  font-size: 1.1rem;
   border: 1px dashed #d9d9d9;
   padding: 0.3rem;
   text-align: center;

@@ -89,7 +89,7 @@ const ConstructionProgress: React.FC<ConstructionProgressProps> = ({
           boxWidth: 10,
           padding: 7,
           font: {
-            size: 12, // Adjust font size to fit the text
+            size: 14, // Adjust font size to fit the text
           },
         },
       },

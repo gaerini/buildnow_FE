@@ -37,7 +37,7 @@ export const TableData = styled.td`
 `;
 
 export const TableHeaderData = styled.th`
-  font-size: 0.95rem;
+  font-size: 1.1rem;
   height: 2.5rem;
   padding: 0.3rem;
   text-align: center;
