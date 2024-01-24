@@ -26,9 +26,8 @@ export const StyledIconContainer = styled.div<StyledIconContainerProps>`
     background-color: #e6f1fc; // or any other color you want on hover
   }
   path {
-    transition: stroke 0.3s;
-    stroke: ${({ isActive }) => (isActive ? "#48659F" : "#C0C4CC")};
-    // ... 기타 스타일
+    transition: fill 0.3s;
+    fill: ${({ isActive }) => (isActive ? "#48659F" : "#C0C4CC")};
   }
   background-color: ${({ isActive }) => (isActive ? "#e6f1fc" : "none")};
 `;

@@ -1,43 +1,61 @@
 import React, { useState } from "react";
-import ProfileIcon from "./Avatar.svg";
-import CompanyListIcon from "./CompanyList.svg";
-import CheckSquareIcon from "./CheckSquare.svg";
-import CheckSquareComp from "./CheckSquare";
-
+import ProfileIcon from "../Icon/svgs/Avatar.svg";
+import CheckBox2 from "../Icon/svgs/CheckBox.svg";
+import ScoreIcon from "../Icon/svgs/ScoreIcon.svg";
 import * as S from "./style";
 
 // 아이콘과 라벨을 가진 버튼의 타입을 정의합니다.
-type SidebarItem = {
+type SidebarItemProps = {
   icon: JSX.Element;
+  name: string;
+  isActive: boolean;
+  onSetActive: (name: string) => void;
+};
+
+type SidebarProps = {
+  items: {
+    icon: JSX.Element;
+    name: string;
+  }[];
+  handleItemClick: (name: string) => void;
+  activeItem: string;
 };
 
 // 사이드바 아이템 컴포넌트
-const SidebarItem: React.FC<SidebarItem> = ({ icon }) => {
-  const [isActive, setIsActive] = useState(false);
-
-  const toggleActive = () => {
-    setIsActive(!isActive);
-  };
-
+const SidebarItem: React.FC<SidebarItemProps> = ({
+  icon,
+  name,
+  isActive,
+  onSetActive,
+}) => {
   return (
-    <S.StyledIconContainer onClick={toggleActive} isActive={isActive}>
+    <S.StyledIconContainer
+      isActive={isActive}
+      onClick={() => onSetActive(name)}
+    >
       {icon}
     </S.StyledIconContainer>
   );
 };
 
 // 전체 사이드바 컴포넌트
-const Sidebar: React.FC = () => {
-  // 여기에 사이드바 아이템 데이터를 추가합니다. 예시로 몇 가지 아이템을 넣었습니다.
-  const items = [{ icon: <CompanyListIcon /> }, { icon: <CheckSquareComp /> }];
-
+const Sidebar: React.FC<SidebarProps> = ({
+  items,
+  handleItemClick,
+  activeItem,
+}) => {
   return (
     <S.StyledSidebar>
       <ProfileIcon />
       {items.map((item, index) => (
         <React.Fragment key={index}>
           {index === 0 && <S.Divider />}
-          <SidebarItem icon={item.icon} />
+          <SidebarItem
+            icon={item.icon}
+            name={item.name}
+            onSetActive={handleItemClick}
+            isActive={activeItem === item.name}
+          />
         </React.Fragment>
       ))}
     </S.StyledSidebar>

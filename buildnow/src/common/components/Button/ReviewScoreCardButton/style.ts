@@ -86,12 +86,12 @@ export const StyledButton = styled.div`
 `;
 
 export const StyledIcon = styled(smallStyledIconWrapper)`
-  margin-right: 0.5rem;
+  margin-right: -3px;
   svg {
-    stroke: #8d8d8d;
+    stroke: #606266;
     fill: #606266;
-    width: 0.8rem;
-    height: 0.8rem;
-    stroke-width: 1;
+    width: 20px;
+    height: 20px;
+    // stroke-width: 1;
   }
 `;

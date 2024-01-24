@@ -5,6 +5,7 @@ export const DropdownContainer = styled.div`
   position: relative;
   font-size: 0.8rem;
   width: 70%;
+  font-family: Pretendard;
 `;
 
 export const DropdownWrapper = styled.div`
@@ -17,7 +18,7 @@ export const DropdownWrapper = styled.div`
 
 export const Label = styled.span`
   white-space: nowrap; // Prevents the text from wrapping
-  fons-size: 1rem;
+  fons-size: 1.5rem;
 `;
 
 export const SelectedWorkType = styled.span`

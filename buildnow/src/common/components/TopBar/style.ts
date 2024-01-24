@@ -7,15 +7,16 @@ export const selectedMenu = styled.div`
   justify-content: flex-end;
   font-family: "Pretendard";
   font-size: 20px;
-  font-weight: 400;
+  font-weight: 600;
   white-space: nowrap;
+  transition: opacity 0.4s ease-in-out;
 `;
 
 export const selectedMenuWrapper = styled.div`
   display: flex;
   justify-content: flex-start;
-  align-items: bottom;
   width: 90px;
+  gap: 5px;
 `;
 
 export const selectedMenuContainer = styled.div`

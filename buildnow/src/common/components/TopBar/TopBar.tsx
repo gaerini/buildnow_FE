@@ -1,33 +1,19 @@
 "use client";
-import CompanyListIcon from "../NewLeftNavBar/CompanyList.svg";
-import CheckBoxIcon from "../NewLeftNavBar/CheckSquare.svg";
+import CheckBox from "../Icon/svgs/CheckBox.svg";
+import ScoreIcon from "../Icon/svgs/ScoreIcon.svg";
 import styles from "./TopBar.module.css";
 import * as S from "./style";
 
 interface TopBarProps {
-  tabname: string;
+  activeItem: string;
 }
-export default function TopBar({ tabname }: TopBarProps) {
+export default function TopBar({ activeItem }: TopBarProps) {
   const renderIcon = () => {
-    switch (tabname) {
-      case "지원 현황":
-        return (
-          <CompanyListIcon
-            width="100%"
-            height="100%"
-            viewBox="10 5 50 50"
-            className={styles.icon}
-          />
-        );
+    switch (activeItem) {
       case "지원 결과":
-        return (
-          <CheckBoxIcon
-            width="35px"
-            height="35px"
-            viewBox="0 0 10 10"
-            className={styles.icon}
-          />
-        );
+        return <CheckBox />;
+      default:
+        return <ScoreIcon />;
     }
   };
 
@@ -36,7 +22,7 @@ export default function TopBar({ tabname }: TopBarProps) {
       <S.selectedMenuContainer>
         <S.selectedMenuWrapper>
           {renderIcon()}
-          <S.selectedMenu>{tabname}</S.selectedMenu>
+          <S.selectedMenu>{activeItem}</S.selectedMenu>
         </S.selectedMenuWrapper>
       </S.selectedMenuContainer>
     </>

@@ -38,11 +38,16 @@ const hoverEffect = css`
     color: white;
     border-color: #959595;
 
-    & > div > svg {
-      stroke-width: 0.5;
-      stroke: white;
+    path {
       fill: white;
+      stroke: white;
+      stroke-width: 0.5;
     }
+    // & > div > svg {
+    //   stroke-width: 0.5;
+    //   stroke: white;
+    //   fill: white;
+    // }
   }
 `;
 

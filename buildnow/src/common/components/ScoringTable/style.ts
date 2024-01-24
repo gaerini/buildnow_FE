@@ -27,7 +27,7 @@ interface CellProps {
 
 /* components/TableComponent.css */
 export const table = styled.table`
-  width: 95%;
+  width: 80%;
   border-collapse: separate;
   border-spacing: 0;
   margin-left: 40px;
