@@ -55,8 +55,6 @@ const CompanyPage = ({ companyName }: CompanyPageProps) => {
       case "operation":
         console.log(`${companyName} 경영일반 상세 페이지`);
         return <OperationDoc companyName={companyName} />;
-      // return <>{companyName} 경영일반 상세페이지</>;
-      // return <SubConFinanceInfo companyName={companyName} />;
       case "finance":
         console.log(`${companyName} 재무부문 상세 페이지`);
         // return <>{companyName} 재무부문 상세페이지</>;
@@ -77,7 +75,6 @@ const CompanyPage = ({ companyName }: CompanyPageProps) => {
         );
       case "performance":
         console.log(`${companyName} 기업 시공실적 상세 페이지`);
-        // return <>{companyName} 시공실적 상세페이지</>;
         return (
           <S.VerticalContainer>
             <PerformanceDoc companyName={companyName} />
