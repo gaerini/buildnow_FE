@@ -21,7 +21,6 @@ const baseButtonStyles = styled.button<CommonButtonProps>`
   max-width: 10rem;
   max-height: 2rem;
   height: auto;
-  white-space: nowrap;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 `;
 
@@ -40,11 +39,16 @@ const hoverEffect = css`
     color: white;
     border-color: #959595;
 
-    & > div > svg {
-      stroke-width: 0.5;
-      stroke: white;
+    path {
       fill: white;
+      stroke: white;
+      stroke-width: 0.5;
     }
+    // & > div > svg {
+    //   stroke-width: 0.5;
+    //   stroke: white;
+    //   fill: white;
+    // }
   }
 `;
 
