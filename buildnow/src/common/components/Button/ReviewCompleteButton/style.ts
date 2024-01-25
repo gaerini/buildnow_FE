@@ -1,5 +1,5 @@
 // ReviewCompleteButtonStyle.ts
-"use client"
+"use client";
 import styled from "styled-components";
 import { baseButtonStyles, hoverEffect } from "../CommonStyle";
 
@@ -15,15 +15,14 @@ export const StyledButton = styled(baseButtonStyles)<ButtonProps>`
   border: 1px solid ${(props) => (props.isChecked ? "#4CAF50" : "#D9D9D9")};
 
   width: 100%;
-  fonst-size: 22px;
-  min-height: 4rem;
-  height: 4rem;
+  font-size: 16.5px; // 기존 값 유지
+  min-height: 3rem;
+  height: 3rem;
 
-  align-self: center; // 부모가 flex일 때 중앙으로 정렬
-  margin: 1em; // 상하 마진을 줘서 끝에서 약간 떨어지게 함
+  align-self: center;
+  margin: 0.75em;
 
-  // position: fixed;
-  bottom: 4em; // 화면의 하단에 위치
+  bottom: 3em;
 
   ${hoverEffect}
   &:hover {
@@ -33,12 +32,12 @@ export const StyledButton = styled(baseButtonStyles)<ButtonProps>`
 `;
 
 export const CheckboxIcon = styled.div<ButtonProps>`
-  width: 1rem;
-  height: 1rem;
+  width: 0.75rem;
+  height: 0.75rem;
   border: 1px solid ${(props) => (props.isChecked ? darkGreen : "#606266")};
   background-color: ${(props) => (props.isChecked ? "white" : "transparent")};
-  margin-right: 1rem;
-  border-radius: 0.25rem;
+  margin-right: 0.75rem;
+  border-radius: 0.1875rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -47,7 +46,7 @@ export const CheckboxIcon = styled.div<ButtonProps>`
   &:after {
     content: "✓";
     color: ${(props) => (props.isChecked ? darkGreen : "transparent")};
-    font-size: 1.25rem;
+    font-size: 0.9375rem;
     transform: translate(0%, 6%);
     transition: color 0.3s;
   }

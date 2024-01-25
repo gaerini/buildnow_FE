@@ -89,7 +89,7 @@ const ConstructionProgress: React.FC<ConstructionProgressProps> = ({
           boxWidth: 10,
           padding: 7,
           font: {
-            size: 14, // Adjust font size to fit the text
+            size: 10, // Adjust font size to fit the text
           },
         },
       },
@@ -112,8 +112,8 @@ const ConstructionProgress: React.FC<ConstructionProgressProps> = ({
                 style={{
                   height: "100%",
                   width: "100%",
-                  marginTop: "1rem",
-                  marginBottom: "1rem",
+                  marginTop: "0.75rem",
+                  marginBottom: "0.75rem",
                 }}
               >
                 <Pie data={privatePublicRatioData} options={chartOptions} />
@@ -137,8 +137,8 @@ const ConstructionProgress: React.FC<ConstructionProgressProps> = ({
                 style={{
                   height: "100%",
                   width: "100%",
-                  marginTop: "1rem",
-                  marginBottom: "1rem",
+                  marginTop: "0.75rem",
+                  marginBottom: "0.75rem",
                 }}
               >
                 <Pie data={sectorRatioData} options={chartOptions} />

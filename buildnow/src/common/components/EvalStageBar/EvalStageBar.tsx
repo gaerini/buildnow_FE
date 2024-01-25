@@ -32,7 +32,7 @@ const EvalStageBar = () => {
       {stages.map((stage, index) => (
         <Stage
           key={index}
-          isActive={activeStage === stage}
+          $isActive={activeStage === stage}
           onClick={() => handleStageClick(stage)}
         >
           {stage}

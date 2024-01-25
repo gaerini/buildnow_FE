@@ -104,7 +104,7 @@ const CompanyPage = ({ companyName }: CompanyPageProps) => {
           </S.TagContainer>
           <S.ResultContainer>
             <S.Score>{subConData.점수}점</S.Score>
-            <S.PassStatus isPassed={subConData.통과여부}>
+            <S.PassStatus $isPassed={subConData.통과여부}>
               {subConData.통과여부 ? "통 과" : "탈 락"}
             </S.PassStatus>
           </S.ResultContainer>
@@ -114,7 +114,7 @@ const CompanyPage = ({ companyName }: CompanyPageProps) => {
         {(Object.keys(tabNames) as TabKey[]).map((tabKey) => (
           <S.Tab
             key={tabKey}
-            isActive={activeTab === tabKey}
+            $isActive={activeTab === tabKey}
             onClick={() => setActiveTab(tabKey)}
           >
             {tabNames[tabKey]}

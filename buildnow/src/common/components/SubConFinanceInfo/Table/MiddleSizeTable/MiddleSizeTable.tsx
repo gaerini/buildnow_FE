@@ -61,16 +61,16 @@ const MiddleSizeTable: React.FC<MiddleSizeTableProps> = ({ name, data }) => {
     maintainAspectRatio: false,
     layout: {
       padding: {
-        left: 30, // Left margin
-        right: 30, // Right margin
-        top: 20,
-        bottom: 20,
+        left: 22.5, // Left margin
+        right: 22.5, // Right margin
+        top: 15,
+        bottom: 15,
       },
     },
     scales: {
       x: {
         ticks: {
-          autoSkipPadding: 20, // Optional: additional padding for the x-axis ticks if needed
+          autoSkipPadding: 15, // Optional: additional padding for the x-axis ticks if needed
           maxRotation: 0, // Optional: to ensure the labels are not rotated
           minRotation: 0,
         },
@@ -78,7 +78,7 @@ const MiddleSizeTable: React.FC<MiddleSizeTableProps> = ({ name, data }) => {
       y: {
         beginAtZero: true, // Optional: if you want the y-axis to start at zero
         ticks: {
-          autoSkipPadding: 20, // Optional: additional padding for the y-axis ticks if needed
+          autoSkipPadding: 15, // Optional: additional padding for the y-axis ticks if needed
         },
       },
     },
