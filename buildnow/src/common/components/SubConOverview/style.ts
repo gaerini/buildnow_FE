@@ -1,7 +1,8 @@
+"use client";
 import styled from "styled-components";
 
 export const TableTitle = styled.h2`
-  font-size: 1.2rem;
+  font-size: 0.9rem; // 수정됨
+  margin-bottom: 0.9rem; // 수정됨
   color: black;
-  margin-bottom: 1.2rem; // 제목과 테이블 사이의 간격
 `;

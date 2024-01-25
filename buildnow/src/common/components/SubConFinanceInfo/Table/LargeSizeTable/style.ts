@@ -1,22 +1,23 @@
+"use client";
 // LargeTableStyle.ts
 import styled from "styled-components";
 import { TableRow } from "../CommonStyle";
 
 export const LargeTableContainer = styled.table`
-  width: 53.9rem;
-  height: 12.25rem;
+  width: 40.425rem; // 수정됨
+  height: 9.1875rem; // 수정됨
   border-collapse: collapse;
   border: none;
   box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.1);
 `;
 
 export const LargeTableWrapper = styled.div`
-  width: 53.9rem;
-  height: 12.25rem;
-  border-radius: 0.25rem;
+  width: 40.425rem; // 수정됨
+  height: 9.1875rem; // 수정됨
+  border-radius: 0.1875rem; // 수정됨
   overflow: hidden;
-  border: 0.8px solid #8d8d8d;
-  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.1);
+  border: 0.6px solid #8d8d8d; // 수정됨
+  box-shadow: 0 0 0.375rem rgba(0, 0, 0, 0.1);
 `;
 
 export const LargeTableData = styled.td<{
@@ -24,7 +25,8 @@ export const LargeTableData = styled.td<{
   rowIndex?: number;
   isLastRow?: boolean;
 }>`
-  padding: 0.5rem;
+  font-size: 0.8rem; //수정됨
+  padding: 0.375rem; // 수정됨
   text-align: center;
   color: ${(props) =>
     props.rowIndex === 0 || props.isFirstColumn ? "black" : "#335c64"};
@@ -48,10 +50,11 @@ export const TableRowHeader = styled(TableRow)`
 `;
 
 export const TableHeaderData = styled.th<{ isHeaderRow?: boolean }>`
-  width: 7.7rem;
-  height: 2rem;
+  width: 5.775rem; // 수정됨
+  height: 1.5rem; // 수정됨
+  padding: 0.375rem; // 수정됨
+  font-size: 0.85rem; //수정됨
   border: 1px dashed #d9d9d9;
-  padding: 0.5rem;
   text-align: center;
   background-color: #f9fafa;
   font-weight: normal;
@@ -67,11 +70,11 @@ export const TableHeaderData = styled.th<{ isHeaderRow?: boolean }>`
 `;
 
 export const TableHeader = styled.div`
-  width: 53.9rem;
-  font-size: 0.6rem;
+  width: 40.425rem; // 수정됨
+  font-size: 0.75rem; // 수정됨
+  padding-right: 0.85rem; // 수정됨
   text-align: right;
-  padding-right: 1rem;
   color: #333;
   align-items: center;
-  margin-bottom: 0.3rem;
+  margin-bottom: 0.225rem;
 `;

@@ -28,7 +28,7 @@ export default function CompanyInfo() {
         />
 
         <S.NavAndTopBarContainer>
-          <TopBar tabname={selectedMenu} />
+          <TopBar activeItem={selectedMenu} />
           <S.ContentContainer>
             <EvalStageBar />
             <EvalQueue />

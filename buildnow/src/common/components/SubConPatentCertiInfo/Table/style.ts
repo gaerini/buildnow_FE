@@ -1,22 +1,23 @@
 // TableStyle.ts
+"use client";
 import styled from "styled-components";
 
 export const TableWrapper = styled.div`
-  width: 53.9rem;
-  height: 12.25rem;
-  border-radius: 0.25rem;
+  width: 45rem; // 수정됨
+  height: 9.1875rem; // 수정됨
+  border-radius: 0.1875rem; // 수정됨
+  margin: 0.75rem 0; // 수정됨
   overflow: hidden;
   border: 0.8px solid #8d8d8d;
-  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.1);
-  margin: 1rem 0;
+  box-shadow: 0 0 0.375rem rgba(0, 0, 0, 0.1);
 `;
 
 export const TableContainer = styled.table`
-  width: 53.9rem;
-  height: 12.25rem;
+  width: 45rem; // 수정됨
+  height: 9.1875rem; // 수정됨
   border-collapse: collapse;
   border: none;
-  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 0.375rem rgba(0, 0, 0, 0.1); // 수정됨
 `;
 
 export const TableRowHeader = styled.tr`
@@ -27,8 +28,8 @@ export const TableRowHeader = styled.tr`
 `;
 
 export const TableData = styled.td`
-font-size : 0.9rem;
-  padding: 0.5rem;
+font-size: 0.75rem; // 수정됨
+  padding: 0.375rem; // 수정됨
   text-align: center;
   color: #335C64;
   border: 1px dashed #d9d9d9;––
@@ -37,7 +38,7 @@ font-size : 0.9rem;
 
   &:first-child {
     border-left: none;
-    width: 2rem;
+    width: 1.5rem;
   }
 
   &:last-child {
@@ -46,17 +47,17 @@ font-size : 0.9rem;
 `;
 
 export const TableHeaderData = styled.th`
-  font-size: 0.95rem;
+  font-size: 0.75rem; // 수정됨
+  padding: 0.375rem; // 수정됨
   border: 1px dashed #d9d9d9;
-  padding: 0.5rem;
   text-align: center;
   background-color: #f9fafa;
-  font-weight: normal;
+  font-weight: 450;
   border-top: none;
 
   &:first-child {
     border-left: none;
-    width: 2rem;
+    width: 1.5rem; //수정됨
   }
 
   &:last-child {
@@ -68,13 +69,13 @@ export const TableHeaderData = styled.th`
 export const AuthTableData = styled(TableData)`
   &:first-child,
   &:nth-child(3) {
-    width: 20.2125rem;
+    width: 15.159375rem; // 수정됨
     background-color: #f9fafa;
   }
 
   &:nth-child(2),
   &:last-child {
-    width: 6.7375rem;
+    width: 5.052625rem; // 수정됨
   }
 
   &:first-child {
@@ -89,12 +90,12 @@ export const AuthTableData = styled(TableData)`
 export const AuthTableHeaderData = styled(TableHeaderData)`
   &:first-child,
   &:nth-child(3) {
-    width: 20.2125rem;
+    width: 15.159375rem; // 수정됨
   }
 
   &:nth-child(2),
   &:last-child {
-    width: 6.7375rem;
+    width: 5.052625rem; // 수정됨
   }
 
   &:first-child {

@@ -27,8 +27,8 @@ const ContentBody: React.FC<Props> = ({ icon, item, column }) => {
         {icon}
         <div>{column}</div>
       </S.Group>
-      <D.ScoreBox score={item.operation} column={"operation"}>
-        <D.contentLetter score={item.operation} column={"operation"}>
+      <D.ScoreBox $score={item.operation} $column={"operation"}>
+        <D.contentLetter $score={item.operation} $column={"operation"}>
           {item.operation}
         </D.contentLetter>
       </D.ScoreBox>

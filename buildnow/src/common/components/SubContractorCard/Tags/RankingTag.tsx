@@ -26,7 +26,7 @@ const getRankingText: React.FC<getRankingTextProps> = ({ ranking }) => {
 
 const RankingTag: React.FC<RankingTagProps> = ({ ranking }) => {
   return (
-    <RankingTagStyled rank={ranking}>
+    <RankingTagStyled $rank={ranking}>
       {getRankingText({ ranking })}
     </RankingTagStyled>
   );

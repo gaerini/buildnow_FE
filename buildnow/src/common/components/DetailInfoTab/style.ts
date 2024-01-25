@@ -1,31 +1,30 @@
-"use client"
-
+"use client";
 import styled from "styled-components";
 
 export const PageContainer = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: flex-start; // Align to the left
+  align-items: flex-start;
   justify-content: flex-start;
   background-color: #f7f7f7;
-  min-height: 100vh;
-  height : auto
-  width: 71.6rem;
+  height: 60rem; // 수정됨
+  width: 53.7rem; // 수정됨
+  box-sizing: border-box;
 `;
 
 export const CompanyNameContainer = styled.h1`
-  font-size: 3rem;
+  font-size: 2.25rem; // 수정됨
   color: #fff;
   background-color: #2f4252;
-  height: 8rem;
-  width: 69.6rem;
+  height: 6rem; // 수정됨
+  width: 53.7rem; // 수정됨
   display: flex;
-  justify-content: space-between; // 내부 요소들을 양 끝으로 정렬
+  justify-content: space-between;
   align-items: center;
-  padding: 1.5rem 5rem 1.5rem 3rem; // 상단, 하단 패딩 및 좌우 패딩
-  border-radius: 1rem 0 0 0;
+  padding: 1.125rem 3.75rem 1.125rem 2.25rem; // 수정됨
+  border-radius: 0.75rem 0 0 0; // 수정됨
   box-sizing: border-box;
-  margin: 1rem;
+  margin: 0 0 0.75rem 0; // 수정됨
 `;
 
 export const InfoContainer = styled.div`
@@ -35,58 +34,55 @@ export const InfoContainer = styled.div`
 `;
 
 export const CompanyLabel = styled.div`
-  font-size: 1.2rem; // "업체명"의 글꼴 크기
-  color: #ffffff; // "업체명"의 글꼴 색상
+  font-size: 0.9rem; // 수정됨
+  color: #ffffff;
   opacity: 0.5;
-  margin-bottom: 0.2rem;
+  margin-bottom: 0.15rem; // 수정됨
 `;
 
 export const CompanyName = styled.div`
-  font-size: 3rem; // 실제 회사 이름의 글꼴 크기
-  font-weight: 500; // 실제 회사 이름의 글꼴 굵기
-  color: #fff; // 실제 회사 이름의 글꼴 색상
+  font-size: 2.25rem; // 수정됨
+  font-weight: 500;
+  color: #fff;
 `;
 
 export const TabsContainer = styled.div`
   display: flex;
   justify-content: flex-start;
-  box-sizing: border-box; // 패딩과 테두리를 너비에 포함
-  width: 69.6rem; // 너비를 TabsContainer와 동일하게 설정
-  margin-right: 1rem;
-  margin-left: 1rem;
+  box-sizing: border-box;
+  width: 53.7rem; // 수정됨
 `;
 
-export const Tab = styled.button<{ isActive: boolean }>`
-  font-size: 1.2rem;
-  padding: 1rem 1.5rem;
-  margin-right: 5px; // Margin between tabs
-  border: none; // No borders
-  background-color: ${(props) => (props.isActive ? "#fff" : "transparent")};
-  color: ${(props) =>
-    props.isActive ? "#2694FE" : "black"}; // Blue text for active tab
+export const Tab = styled.button<{ $isActive: boolean }>`
+  font-size: 0.9rem; // 수정됨
+  padding: 0.75rem 1.125rem; // 수정됨
+  margin-right: 3.75px; // 수정됨
+  border: none;
+  background-color: ${(props) => (props.$isActive ? "#fff" : "transparent")};
+  color: ${(props) => (props.$isActive ? "#2694FE" : "black")};
   cursor: pointer;
   border-radius: ${(props) =>
-    props.isActive
-      ? "0.5rem 0.5rem 0 0"
-      : "0"}; // Rounded corners for active tab on top
+    props.$isActive ? "0.375rem 0.375rem 0 0" : "0"}; // 수정됨
   text-align: center;
 `;
 
 export const ContentContainer = styled.div`
-  display: flex; // Use flexbox layout
-  flex-direction: column; // Stack children vertically
-  align-items: center; // Center children horizontally
-  height: 67rem;
-  padding: 2rem 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  padding: 1.5rem 2.25rem; // 수정됨
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   background-color: #fff;
-  width: 69.6rem; // Full width to align with the PageContainer
-  box-sizing: border-box; // Include padding in width
-  margin-top: -1px; // Connect with the TabsContainer
-  margin-right: 1rem;
-  margin-left: 1rem;
+  width: 53.7rem; // 수정됨
+  box-sizing: border-box;
+  margin-top: -1px;
   align-items: center;
-  border-radius: 0 0 0 1rem;
+  border-radius: 0 0 0 0.75rem; // 수정됨
+  overflow-y: auto;
+  &::-webkit-scrollbar {
+    width: 3.75px; // 수정됨
+  }
 `;
 
 export const TagAndResultContainer = styled.div`
@@ -97,26 +93,34 @@ export const TagAndResultContainer = styled.div`
 export const TagContainer = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 0.15rem;
+  gap: 0.1125rem; // 수정됨
 `;
 
 export const ResultContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  margin-left: 2rem;
+  margin-left: 1.5rem; // 수정됨
 `;
 
 export const Score = styled.div`
-  font-size: 2.3rem; // 글꼴 크기 증가
-  font-weight: 550; // 글꼴 굵기 변경
-  margin-bottom: 0.5rem;
-  letter-spacing: 0.1em; // 문자 사이 간격 추가
+  font-size: 1.725rem; // 수정됨
+  font-weight: 550;
+  margin-bottom: 0.375rem; // 수정됨
 `;
 
-export const PassStatus = styled.div<{ isPassed: boolean }>`
-  font-size: 1.5rem;
-  font-weight: 550; // 글꼴 굵기 변경
-  color: ${(props) => (props.isPassed ? "#409EFF" : "#F56C6C")}; // 색상 변경
-  letter-spacing: 0.1em; // 문자 사이 간격 추가
+export const PassStatus = styled.div<{ $isPassed: boolean }>`
+  font-size: 1.125rem; // 수정됨
+  font-weight: 550;
+  color: ${(props) => (props.$isPassed ? "#409EFF" : "#F56C6C")};
+  letter-spacing: 0.075em; // 수정됨
+`;
+
+export const VerticalContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  & > *:not(:last-child) {
+    margin-bottom: 2.25rem; // 수정됨
+  }
 `;
