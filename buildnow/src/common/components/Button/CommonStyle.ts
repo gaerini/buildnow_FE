@@ -1,5 +1,5 @@
 // CommonStyles.ts
-"use client"
+"use client";
 import styled, { css } from "styled-components";
 
 interface CommonButtonProps {
@@ -8,18 +8,18 @@ interface CommonButtonProps {
 }
 
 const baseButtonStyles = styled.button<CommonButtonProps>`
-  padding: 0.5rem 1rem;
-  font-size : 1rem;
+  padding: 0.375rem 0.75rem;
+  font-size: 0.75rem;
   text-align: center;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
   transition: background-color 0.3s, border-color 0.3s, color 0.3s;
-  border-radius: 0.25rem;
-  width : 100%
-  max-width: 10rem;
-  max-height: 2rem;
+  border-radius: 0.1875rem;
+  width: 100%;
+  max-width: 7.5rem;
+  max-height: 1.5rem;
   height: auto;
   white-space: nowrap;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -29,9 +29,9 @@ const smallButtonStyles = styled(baseButtonStyles)`
   background-color: #d9d9d9;
   color: #606266;
   border: 1px solid #d9d9d9;
-  font-size: 0.75rem;
-  max-width: 10rem;
-  max-height: 1rem;
+  font-size: 0.5625rem;
+  max-width: 7.5rem;
+  max-height: 0.75rem;
 `;
 
 const hoverEffect = css`
@@ -52,22 +52,22 @@ export const StyledIconWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-left: 0.5rem;
+  margin-left: 0.375rem;
   svg {
     transition: fill 0.3s;
     stroke-width: 0.3;
-    width: 1rem;
-    height: 1rem;
+    width: 0.75rem;
+    height: 0.75rem;
   }
 `;
 
 export const smallStyledIconWrapper = styled(StyledIconWrapper)`
-  margin-left: 0.3rem;
+  margin-left: 0.225rem;
   svg {
     stroke: #8d8d8d;
     fill: #606266;
-    width: 0.6rem;
-    height: 0.6rem;
+    width: 0.45rem;
+    height: 0.45rem;
     stroke-width: 1;
   }
 `;

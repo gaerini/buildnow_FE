@@ -1,4 +1,4 @@
-"use client"
+"use client";
 // ReviewScoreCardButtonStyle.ts
 import styled from "styled-components";
 import {
@@ -10,8 +10,8 @@ import {
 } from "../CommonStyle";
 
 export const StyledButton = styled(smallButtonStyles)`
-  border-radius: 0.25rem;
-  ${hoverEffect}// Any additional specific styles here
+  border-radius: 0.1875rem;
+  ${hoverEffect}
 `;
 
 export const StyledIcon = styled(smallStyledIconWrapper)``;

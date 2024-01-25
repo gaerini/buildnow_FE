@@ -4,7 +4,7 @@ import styled from "styled-components";
 
 export const DropdownContainer = styled.div`
   position: relative;
-  font-size: 0.8rem;
+  font-size: 0.6rem; // 수정됨
   width: 70%;
 `;
 
@@ -13,12 +13,12 @@ export const DropdownWrapper = styled.div`
   justify-content: space-between; // Spread the label and the dropdown box across the full width
   align-items: center;
   width: 100%; // Ensure the wrapper takes the full width available
-  max-width: 17rem;
+  max-width: 12.75rem; // 수정됨
 `;
 
 export const Label = styled.span`
   white-space: nowrap; // Prevents the text from wrapping
-  fons-size: 1rem;
+  font-size: 0.75rem; // 수정됨
 `;
 
 export const SelectedWorkType = styled.span`
@@ -30,19 +30,21 @@ export const SelectedWorkType = styled.span`
 
 export const ApplyCount = styled.span<{ isVisible?: boolean }>`
   background-color: #e0e0e0;
-  padding: 0.2rem 0.2rem;
+  padding: 0.15rem 0.15rem; // 수정됨
+  font-size: 0.525rem; // 수정됨
+  height: 0.6rem; // 수정됨
+  width: 0.675rem; // 수정됨
+  margin-right: 0.375rem; // 수정됨
   color: "gray";
-  border-radius: 0.25rem;
-  font-size: 0.7rem;
+
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  height: 0.8rem; // Reduced height to match the new header size
-  width: 0.9rem;
+
   line-height: 1;
   position: absolute; // Position the apply count absolutely relative to its parent
   right: 0; // Align to the far right of its parent container
-  margin-right: 0.5rem; // Add 0.5rem space between the text and the apply count box
+
   display: ${({ isVisible }) =>
     isVisible
       ? "inline-flex"
@@ -53,21 +55,23 @@ export const DropdownHeader = styled.div`
   display: flex;
   align-items: center;
   cursor: pointer;
-  padding: 0.25rem 0.5rem; // Reduced vertical padding to decrease height
+  padding: 0.1875rem 0.375rem; // 수정됨
+  max-width: 15rem; // 수정됨
+  margin-left: 0.375rem; // 수정됨
   border: 1px solid #ccc;
   width: 100%;
-  max-width: 20rem;
+
   box-sizing: border-box;
-  margin-left: 0.5rem;
+
   position: relative;
-  border-radius: 0.25rem;
+  border-radius: 0.1875rem; //수정됨
 `;
 
 export const DropdownIcon = styled.span<{ isOpen: boolean }>`
   border: solid black;
   border-width: 0 2px 2px 0;
   display: inline-block;
-  padding: 3px;
+  padding: 2.25px
   transform: ${({ isOpen }) => (isOpen ? "rotate(45deg)" : "rotate(-135deg)")};
   transition: transform 0.3s;
 `;
@@ -86,13 +90,13 @@ export const DropdownList = styled.ul`
   border-radius: 0.25rem;
   border-top: none; // Remove top border to seamlessly connect with the header
   box-sizing: border-box; // Include padding and borders in the width
-  max-height: calc(2.5rem * 5);
+  max-height: calc(1.875rem * 5); // 수정됨
   overflow-y: auto;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); // Add a subtle shadow for depth
 `;
 
 export const DropdownListItem = styled.li<{ isSelected: boolean }>`
-  padding: 0.5rem;
+  padding: 0.375rem; // 수정됨
   cursor: pointer;
   display: flex;
   justify-content: space-between;
