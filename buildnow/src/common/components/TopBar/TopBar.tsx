@@ -21,7 +21,7 @@ export default function TopBar({ activeItem }: TopBarProps) {
     <>
       <S.selectedMenuContainer>
         <S.selectedMenuWrapper>
-          {renderIcon()}
+          {/* {renderIcon()} */}
           <S.selectedMenu>{activeItem}</S.selectedMenu>
         </S.selectedMenuWrapper>
       </S.selectedMenuContainer>

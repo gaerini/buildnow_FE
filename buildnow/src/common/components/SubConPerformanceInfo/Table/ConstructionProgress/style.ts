@@ -1,8 +1,9 @@
 // style.ts
+"use client";
 import styled from "styled-components";
 
 export const TableWrapper = styled.div`
-  width: 53.9rem;
+  width: 60rem;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
@@ -23,9 +24,9 @@ export const TableRowHeader = styled.tr`
 `;
 
 export const TableData = styled.td`
-  width: 100%;
+  box-sizing: border-box;
   font-size: 1rem;
-  padding: 0.3rem;
+  padding: 0.3rem 2rem 0.3rem 2rem;
   text-align: center;
   color: #335c64;
   border-bottom: 1px dashed #d9d9d9;
@@ -36,7 +37,7 @@ export const TableData = styled.td`
 `;
 
 export const TableHeaderData = styled.th`
-  font-size: 0.95rem;
+  font-size: 1.1rem;
   height: 2.5rem;
   padding: 0.3rem;
   text-align: center;

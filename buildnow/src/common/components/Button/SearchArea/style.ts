@@ -7,7 +7,7 @@ export const SearchContainer = styled.div`
   padding: 4px;
   background-color: #fff;
   border-radius: 5px; // Update based on your design
-  border: 3px solid #d9ecff;
+  border: 2px solid #d9ecff;
   box-sizing: border-box;
   width: 300px;
   height: 30px;

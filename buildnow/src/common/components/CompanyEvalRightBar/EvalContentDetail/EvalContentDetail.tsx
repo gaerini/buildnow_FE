@@ -18,8 +18,8 @@ const ContentDetail = ({ item }: { item: TableData }) => {
     <>
       <S.Detailcomp>
         - 법인 설립 년수
-        <D.ScoreBox score={item.operation} column={"operation"}>
-          <D.contentLetter score={"7/40"} column={"operation"}>
+        <D.ScoreBox $score={item.operation} $column={"operation"}>
+          <D.contentLetter $score={"7/40"} $column={"operation"}>
             {" 7 / 40"}
           </D.contentLetter>
         </D.ScoreBox>

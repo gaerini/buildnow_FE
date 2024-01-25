@@ -67,7 +67,7 @@ const TableComponent: React.FC<{ data: TableData[] }> = ({ data }) => {
               <S.Th
                 {...column.getHeaderProps()}
                 key={index}
-                columname={column.id}
+                $columname={column.id}
               >
                 <S.headerLetter>{column.render("Header")} </S.headerLetter>
               </S.Th>
@@ -79,7 +79,7 @@ const TableComponent: React.FC<{ data: TableData[] }> = ({ data }) => {
         {rows.map((row, index) => {
           prepareRow(row);
           return (
-            <tr {...row.getRowProps()} className="tr" key={index}>
+            <S.Tr {...row.getRowProps()} className="tr" key={index}>
               {row.cells.map((cell, index) => {
                 const isScoreBox =
                   cell.column.id === "operation" ||
@@ -89,22 +89,22 @@ const TableComponent: React.FC<{ data: TableData[] }> = ({ data }) => {
                 return (
                   <S.Td
                     {...cell.getCellProps()}
-                    columname={cell.column.id}
+                    $columname={cell.column.id}
                     key={index}
                   >
                     {isScoreBox ? (
-                      <S.ScoreBox score={cell.value} column={cell.column.id}>
+                      <S.ScoreBox $score={cell.value} $column={cell.column.id}>
                         <S.contentLetter
-                          score={cell.value}
-                          column={cell.column.id}
+                          $score={cell.value}
+                          $column={cell.column.id}
                         >
                           {cell.render("Cell")}
                         </S.contentLetter>
                       </S.ScoreBox>
                     ) : (
                       <S.contentLetter
-                        score={cell.value}
-                        column={cell.column.id}
+                        $score={cell.value}
+                        $column={cell.column.id}
                       >
                         {cell.render("Cell")}
                       </S.contentLetter>
@@ -112,7 +112,7 @@ const TableComponent: React.FC<{ data: TableData[] }> = ({ data }) => {
                   </S.Td>
                 );
               })}
-            </tr>
+            </S.Tr>
           );
         })}
       </tbody>

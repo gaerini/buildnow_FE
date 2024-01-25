@@ -4,7 +4,7 @@ import React from "react";
 import TableComponent from "../../common/components/ScoringTable/ScoringTable";
 import ReviewScoreCardButton from "../../common/components/Button/ReviewScoreCardButton/ReviewScoreCardButton";
 
-type TableData = {
+type TableDataProps = {
   companyname: string;
   operation: string;
   finance: string;
@@ -16,14 +16,14 @@ type TableData = {
 };
 
 // JSON 파일에서 데이터를 불러오고, React 컴포넌트로 변환하는 함수
-const loadAndTransformData = (TableData) => {
+const loadAndTransformData = (TableData: TableDataProps[]) => {
   return TableData.map((item) => ({
     ...item,
     details: <ReviewScoreCardButton />, // React 컴포넌트로 details 필드를 대체
   }));
 };
 
-const tableData: TableData[] = loadAndTransformData(
+const tableData: TableDataProps[] = loadAndTransformData(
   require("../../../mock/tablescore.json")
 );
 

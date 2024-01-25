@@ -6,6 +6,8 @@ import TopBar from "@/common/components/TopBar/TopBar";
 import DetailInfoTab from "../../common/components/DetailInfoTab/DetailInfoTab";
 
 import * as S from "./style";
+import EvalQueue from "@/common/components/EvalQueue/EvalQueue";
+import EvalStageBar from "@/common/components/EvalStageBar/EvalStageBar";
 
 export default function CompanyInfo() {
   const [selectedMenu, setSelectedMenu] = useState("Home");
@@ -24,7 +26,14 @@ export default function CompanyInfo() {
           companyLogoImg={data.companyLogoImg}
           onChange={selectedMenuHandler}
         />
-        <TopBar tabname={selectedMenu}></TopBar>
+
+        <S.NavAndTopBarContainer>
+          <TopBar activeItem={selectedMenu} />
+          <S.ContentContainer>
+            <EvalStageBar />
+            <EvalQueue />
+          </S.ContentContainer>
+        </S.NavAndTopBarContainer>
       </S.CompanyInfoWindowWrapper>
     </>
   );

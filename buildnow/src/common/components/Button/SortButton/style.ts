@@ -29,6 +29,7 @@ export const Button = styled.button`
   .button-text {
     margin-right: 6px; // Adjust the spacing based on your design
     color: #93b4cb; // Update the text color according to your design
+    white-space: nowrap;
   }
 
   // Styling for the icon inside the button

@@ -3,13 +3,15 @@
 import React, { useState } from "react";
 import NavBar from "@/common/components/NewLeftNavBar/NewLeftNavBar";
 import TopBar from "@/common/components/TopBar/TopBar";
-import DropDown from "@/common/components/WorkTypeDropDown/WorkTypeDropDown";
 
 import CheckBox from "@/common/components/Icon/svgs/CheckBox.svg";
 import ScoreIcon from "@/common/components/Icon/svgs/ScoreIcon.svg";
 import CompanyScore from "../companyscore/page";
 import * as S from "./style";
 import WorkTypeDropDown from "@/common/components/WorkTypeDropDown/WorkTypeDropDown";
+import DownLoadExcel from "@/common/components/Button/DownLoadExcel/DownLoadExcel";
+import SearchArea from "@/common/components/Button/SearchArea/SearchArea";
+import SortButton from "@/common/components/Button/SortButton/SortButton";
 
 const items = [
   { name: "지원 현황", icon: <ScoreIcon /> },
@@ -32,8 +34,15 @@ const Sidebar: React.FC = () => {
         <S.MainContent>
           <TopBar activeItem={activeItem}></TopBar>
           <div style={{ width: "100%" }}>
-            <WorkTypeDropDown />
-            <CompanyScore />
+            <S.ButtonsContainer>
+              <WorkTypeDropDown />
+              <DownLoadExcel />
+              <SortButton />
+              <SearchArea />
+            </S.ButtonsContainer>
+            <S.TableContainer>
+              <CompanyScore />
+            </S.TableContainer>
           </div>
         </S.MainContent>
       </S.CompanyInfoWindowWrapper>

@@ -1,7 +1,9 @@
+"use client";
+
 import styled from "styled-components";
 
 interface StyledIconContainerProps {
-  isActive: boolean;
+  $isactive: boolean;
 }
 
 export const Divider = styled.div`
@@ -27,9 +29,9 @@ export const StyledIconContainer = styled.div<StyledIconContainerProps>`
   }
   path {
     transition: fill 0.3s;
-    fill: ${({ isActive }) => (isActive ? "#48659F" : "#C0C4CC")};
+    fill: ${({ $isactive }) => ($isactive ? "#48659F" : "#C0C4CC")};
   }
-  background-color: ${({ isActive }) => (isActive ? "#e6f1fc" : "none")};
+  background-color: ${({ $isactive }) => ($isactive ? "#e6f1fc" : "none")};
 `;
 
 // 전체 사이드바를 스타일링합니다.
@@ -37,10 +39,10 @@ export const StyledSidebar = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 10px;
+  gap: 15px;
   width: 80px;
-  background-color: white;
-  height: 100vh; // 전체 뷰포트 높이
+  background-color: #1e3156;
+  height: 130vh; // 전체 뷰포트 높이
   box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
   //margin: 0px;
   //padding: 10px;

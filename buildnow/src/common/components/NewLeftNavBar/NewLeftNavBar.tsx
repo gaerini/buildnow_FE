@@ -8,7 +8,7 @@ import * as S from "./style";
 type SidebarItemProps = {
   icon: JSX.Element;
   name: string;
-  isActive: boolean;
+  $isactive: boolean;
   onSetActive: (name: string) => void;
 };
 
@@ -25,12 +25,12 @@ type SidebarProps = {
 const SidebarItem: React.FC<SidebarItemProps> = ({
   icon,
   name,
-  isActive,
+  $isactive,
   onSetActive,
 }) => {
   return (
     <S.StyledIconContainer
-      isActive={isActive}
+      $isactive={$isactive}
       onClick={() => onSetActive(name)}
     >
       {icon}
@@ -54,7 +54,7 @@ const Sidebar: React.FC<SidebarProps> = ({
             icon={item.icon}
             name={item.name}
             onSetActive={handleItemClick}
-            isActive={activeItem === item.name}
+            $isactive={activeItem === item.name}
           />
         </React.Fragment>
       ))}

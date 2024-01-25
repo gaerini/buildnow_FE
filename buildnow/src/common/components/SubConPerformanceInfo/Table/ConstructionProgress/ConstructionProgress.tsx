@@ -44,28 +44,16 @@ const prepareSectorRatioData = (data: { [key: string]: number }) => {
   const labels = sortedEntries.map(([key]) => key);
   const values = sortedEntries.map(([, value]) => value);
   const backgroundColors = [
-    "#573838",
-    "#6F4B4B",
-    "rgba(87, 56, 56, 0.65)",
-    "#656565",
+    "#191970",
+    "#000080",
+    "#0000CD",
+    "#0000FF",
+    "#4169E1",
+    "#6495ED",
+    "#1E90FF",
+    "#00BFFF",
+    "#87CEFA",
   ]; // Colors for top 4
-
-  const othersIndex = 4; // Index at which to start "Others"
-  const otherColor = "#D9D9D9"; // Color for "Others"
-
-  if (labels.length > othersIndex) {
-    const othersLabels = labels.splice(othersIndex); // Remove and retrieve labels for "Others"
-    const othersValue = values
-      .splice(othersIndex)
-      .reduce((sum, val) => sum + val, 0); // Calculate total for "Others"
-    labels.push(`기타 (${othersLabels.join(", ")})`); // Create the new "Others" label
-    values.push(othersValue);
-    backgroundColors.splice(
-      othersIndex,
-      backgroundColors.length - othersIndex,
-      otherColor
-    ); // Set color for "Others"
-  }
 
   return {
     labels,
@@ -88,13 +76,21 @@ const ConstructionProgress: React.FC<ConstructionProgressProps> = ({
 
   const chartOptions = {
     maintainAspectRatio: false,
+    layout: {
+      padding: {
+        right: 1, // Adjust this value as needed to reduce the space
+      },
+    },
     plugins: {
       legend: {
         position: "right" as const, // 'right'를 문자열 리터럴 타입으로 지정
         align: "start" as const, // 'start'를 문자열 리터럴 타입으로 지정
         labels: {
           boxWidth: 10,
-          padding: 12,
+          padding: 7,
+          font: {
+            size: 14, // Adjust font size to fit the text
+          },
         },
       },
     },
@@ -115,10 +111,9 @@ const ConstructionProgress: React.FC<ConstructionProgressProps> = ({
               <div
                 style={{
                   height: "100%",
+                  width: "100%",
                   marginTop: "1rem",
                   marginBottom: "1rem",
-                  marginRight: "3rem",
-                  marginLeft: "3rem",
                 }}
               >
                 <Pie data={privatePublicRatioData} options={chartOptions} />
@@ -141,6 +136,7 @@ const ConstructionProgress: React.FC<ConstructionProgressProps> = ({
               <div
                 style={{
                   height: "100%",
+                  width: "100%",
                   marginTop: "1rem",
                   marginBottom: "1rem",
                 }}
