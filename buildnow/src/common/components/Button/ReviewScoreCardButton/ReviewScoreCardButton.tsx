@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import * as S from "./style";
-import CheckPaperIcon from "./check-paper.svg"; // Importing the SVG as a component
+import CheckPaperIcon from "./check-paper2.svg"; // Importing the SVG as a component
 
 const ReviewScoreCardButton: React.FC = () => {
   const [isActive, setIsActive] = useState(false);
@@ -12,10 +12,10 @@ const ReviewScoreCardButton: React.FC = () => {
 
   return (
     <S.StyledButton onClick={handleButtonClick}>
-      배점표 검토하기
       <S.StyledIcon>
         <CheckPaperIcon />
       </S.StyledIcon>
+      배점표 검토하기
     </S.StyledButton>
   );
 };

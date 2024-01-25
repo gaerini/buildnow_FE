@@ -4,8 +4,9 @@ import styled from "styled-components";
 
 export const DropdownContainer = styled.div`
   position: relative;
-  font-size: 0.6rem; // 수정됨
+  font-size: 0.75rem; // 수정됨
   width: 70%;
+  font-family: Pretendard;
 `;
 
 export const DropdownWrapper = styled.div`
@@ -18,7 +19,7 @@ export const DropdownWrapper = styled.div`
 
 export const Label = styled.span`
   white-space: nowrap; // Prevents the text from wrapping
-  font-size: 0.75rem; // 수정됨
+  font-size: 1.125rem; // 수정됨
 `;
 
 export const SelectedWorkType = styled.span`
@@ -67,12 +68,13 @@ export const DropdownHeader = styled.div`
   border-radius: 0.1875rem; //수정됨
 `;
 
-export const DropdownIcon = styled.span<{ isOpen: boolean }>`
+export const DropdownIcon = styled.span<{ $isOpen: boolean }>`
   border: solid black;
   border-width: 0 2px 2px 0;
   display: inline-block;
-  padding: 2.25px
-  transform: ${({ isOpen }) => (isOpen ? "rotate(45deg)" : "rotate(-135deg)")};
+  padding: 3px;
+  transform: ${({ $isOpen }) =>
+    $isOpen ? "rotate(45deg)" : "rotate(-135deg)"};
   transition: transform 0.3s;
 `;
 

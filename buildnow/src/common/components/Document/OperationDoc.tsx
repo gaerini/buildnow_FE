@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import * as S from "./style";
-import { Document, Page } from "@react-pdf/renderer";
+// import { Document, Page } from "@react-pdf/renderer";
 import mockData from "../../../../mock/documenturl.json";
 // Define the structure of the document data
 interface DocumentData {

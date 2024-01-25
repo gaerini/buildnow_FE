@@ -41,7 +41,7 @@ const WorkTypeDropDown: React.FC = () => {
   const [selectedNumApply, setSelectedNumApply] = useState<number>(
     Object.values(numApply).reduce((acc, curr) => acc + curr, 0) // Initialize with the total number
   );
-  const [isOpen, setIsOpen] = useState<boolean>(false);
+  const [$isOpen, setIsOpen] = useState<boolean>(false);
 
   const handleSelect = (workType: string) => {
     console.log(`${workType} 필터링 페이지를 렌더링 합니다`); // 여기에서 필터링된 페이지 보여주는 코드 짜면 됨!
@@ -53,11 +53,11 @@ const WorkTypeDropDown: React.FC = () => {
   return (
     <S.DropdownContainer>
       <S.DropdownWrapper>
-        <S.Label>공종명:</S.Label>
-        <S.DropdownHeader onClick={() => setIsOpen(!isOpen)}>
+        <S.Label>공종명 :</S.Label>
+        <S.DropdownHeader onClick={() => setIsOpen(!$isOpen)}>
           <S.SelectedWorkType>{selectedWorkType}</S.SelectedWorkType>
-          <S.DropdownIcon isOpen={isOpen} />
-          {isOpen && (
+          <S.DropdownIcon $isOpen={$isOpen} />
+          {$isOpen && (
             <S.DropdownList>
               {Object.entries(numApply).map(([workType, numApplications]) => (
                 <S.DropdownListItem
